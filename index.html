@@ -35,23 +35,23 @@
 
         a:focus,
         a:hover {
-            color: #B22222; /* Slightly darker red for hover */
-            border-color: #B22222;
+            color: #d13f3fd9; /* Slightly darker red for hover */
+            border-color: #d13f3f;
         }
         .publogo {
             width: 230px;
             max-height: 190px;
-            margin-right: 15px;
-            float: left;
             border: 0;
+            flex-shrink: 0;
         }
         .publication {
-            clear: left;
             padding-bottom: 0px;
-            margin-bottom: 20px; /* Reduced margin for smaller spacing */
+            margin-bottom: 40px; /* Increased margin for more space */
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
         .publication p {
-            height: 100px;
             padding-top: 5px;
         }
         .publication strong a {
@@ -63,7 +63,7 @@
             top: 5px; /* Reduced top margin to bring links closer */
         }
         .publication .links a {
-            margin-right: 20px;
+            margin-right: 10px;
         }
     </style>
     <title>Weiyang Jin's Homepage</title>
@@ -86,9 +86,12 @@
                     <p>
                         <a href="https://github.com/WayneJin0918/">[GitHub]</a>
                     </p>
+                    <p>
+                        <span style="color: #4f0fa4b2;"><strong>I'm looking for industrial internship about UMMs!!!</strong></li>
+                    </p>
                 </td>
                 <td width="35%" align="center">
-                    <img src="https://placehold.co/300x400/ccc/fff?text=Profile+Image" width="100%" />
+                    <img src="content/images/myfigure.jpg" width="75%" />
                 </td>
             </tr>
         </table>
@@ -97,11 +100,8 @@
         <h2 id="about-me" style="color:#d82644da">Biography</h2>
         <hr style="margin-top:-16px;margin-bottom:10px;" />
 
-        <p>I am a Ph.D. student at MMLab, University of Hong Kong, starting from November 2025.
-        Prior to that, I obtained my Bachelor of Engineering degree in Communications from Beijing Jiaotong University (Aug 2021 - Jul 2025).
-        </p>
-
-        <p>My research interests lie in machine learning, with a particular focus on how to build the visual intelligence via representation and self-evolution.</p>
+        <p>I am a Ph.D. student at MMLab, University of Hong Kong, starting from November 2025, supervised by Prof. Xihui Liu.
+     Prior to that, I obtained my Bachelor of Engineering degree in EE from Beijing Jiaotong University (from 2021 to 2025). My research interests lie in machine learning, with a particular focus on how to build the visual intelligence via representation and self-evolution.</p>
 
         <!-- News Section -->
         <h2 id="news" style="color:#d82644da">News</h2>
@@ -131,7 +131,7 @@
 
         <!-- Publication 1 -->
         <div class="publication">
-            <img src="https://placehold.co/230x150/eee/aaa?text=SRUM" class="publogo">
+            <img src="content/images/srum_teaser.png" class="publogo">
             <p>
                 <strong>
                     <a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a>
@@ -148,7 +148,7 @@
 
         <!-- Publication 2 -->
         <div class="publication">
-            <img src="https://placehold.co/230x150/eee/aaa?text=SemiReward" class="publogo">
+            <img src="content/images/semi_teaser.png" class="publogo">
             <p>
                 <strong>
                     <a href="https://arxiv.org/abs/2310.03013">SemiReward: A General Reward Model for Semi-supervised Learning</a>
@@ -165,7 +165,7 @@
 
         <!-- Publication 3 -->
         <div class="publication">
-            <img src="https://placehold.co/230x150/eee/aaa?text=WISE" class="publogo">
+            <img src="content/images/wise_teaser.png" class="publogo">
             <p>
                 <strong>
                     <a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a>
@@ -182,7 +182,7 @@
 
         <!-- Publication 4 -->
         <div class="publication">
-            <img src="https://placehold.co/230x150/eee/aaa?text=InternVLA-M1" class="publogo">
+            <img src="content/images/intern_m1_teaser.png" class="publogo">
             <p>
                 <strong>
                     <a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a>
@@ -199,7 +199,7 @@
 
         <!-- Experience Section -->
         <h2 id="experience" style="color:#d82644da">Experience</h2>
-        <hr style="margin-top:-10px;margin-bottom:10px;" />
+        <hr style="margin-top:5px;margin-bottom:10px;" />
 
         <ul style="font-size: 18px;">
             <li style="margin-bottom: 10px">
