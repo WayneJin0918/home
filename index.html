@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            background-color: #ffffff;
+            font-family: Palatino, 'Times New Roman', serif;
+        }
+        .container {
+            background-color: #fff;
+            zoom: 1;
+            margin-left: auto;
+            margin-right: auto;
+            vertical-align: middle;
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px auto;
+        }
+        .content {
+            margin-bottom: -10px;
+            display: inline-block;
+            width: 100%;
+        }
+        a {
+            color: #CC3333; /* Adjusted to a lighter red */
+            text-decoration: none;
+            transition: 0.3s all cubic-bezier(0.42, 0, 0.57, 1.96);
+        }
+
+        a:focus,
+        a:hover {
+            color: #B22222; /* Slightly darker red for hover */
+            border-color: #B22222;
+        }
+        .publogo {
+            width: 230px;
+            max-height: 190px;
+            margin-right: 15px;
+            float: left;
+            border: 0;
+        }
+        .publication {
+            clear: left;
+            padding-bottom: 0px;
+            margin-bottom: 40px; /* Added margin for better spacing */
+        }
+        .publication p {
+            height: 100px;
+            padding-top: 5px;
+        }
+        .publication strong a {
+            font-size: 17px;
+            color: #0000A0;
+        }
+        .publication .links {
+            position: relative;
+            top: 15px;
+        }
+        .publication .links a {
+            margin-right: 20px;
+        }
+    </style>
+    <title>Weiyang Jin's Homepage</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <table width="100%" align="center" border="0">
+            <tr>
+                <td width="55%" valign="middle">
+                    <h1 style="margin-top:18px;margin-bottom:36px;">WEIYANG JIN</h1>
+                    <p style="font-size:16px; color:rgb(0, 0, 0)">
+                        <b style="color: rgb(0, 0, 0)">PhD Student of IDS (MMLab)</b> <br>
+                        <span style="color: rgb(0, 0, 0)">University of Hong Kong</span> <br>
+                        <span style="color: rgb(0, 0, 0)">Hong Kong, P.R.China</span>
+                        <br><br>
+                        Email: wayneyjin [at] gmail [dot] com
+                    </p>
+                    <p>
+                        <a href="https://github.com/WayneJin0918/">[GitHub]</a>
+                    </p>
+                </td>
+                <td width="45%" align="center">
+                    <img src="content/images/myfigure.jpg" width="100%" />
+                </td>
+            </tr>
+        </table>
+
+        <!-- Biography Section -->
+        <h2 id="about-me" style="color:#8B0000">Biography</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <p>I am a Ph.D. student at MMLab, University of Hong Kong, starting from November 2025.
+        Prior to that, I obtained my Bachelor of Engineering degree in Communications from Beijing Jiaotong University (Aug 2021 - Jul 2025).
+        </p>
+
+        <p>My research interests lie in machine learning, with a particular focus on how to build the visual intelligence via representation and self-evolution.</p>
+
+        <!-- News Section -->
+        <h2 id="news" style="color:#8B0000">News</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <ul>
+            <li>[2025/10] Will join in <span style="color: #FF4500;">HKU-MMLab</span> and start my PhD career.</li>
+        </ul>
+
+        <!-- JavaScript Function -->
+        <script type="text/javascript">
+            function hideshow(which) {
+                if (!document.getElementById)
+                    return
+                if (which.style.display == "block")
+                    which.style.display = "none"
+                else
+                    which.style.display = "block"
+            }
+        </script>
+
+        <!-- Selected Projects Section -->
+        <h2 id="publications" style="color:#8B0000">Selected Projects</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <p>*: Equal Contribution, †: Project Leader</p>
+
+        <!-- Publication 1 -->
+        <div class="publication">
+            <img src="content/images/srum_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="#">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a>
+                </strong>
+                <br>
+                <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu
+                <br>
+                <em>arXiv</em>
+                <br>
+                <span class="links">
+                    <a href="#">https://arxiv.org/abs/2510.12784</a>
+                    <a href="#">https://github.com/WayneJin0918/SRUM</a>
+                </span>
+            </p>
+        </div>
+        <br><br><br><br>
+
+        <!-- Publication 2 -->
+        <div class="publication">
+            <img src="content/images/semi_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="#">SemiReward: A General Reward Model for Semi-supervised Learning</a>
+                </strong>
+                <br>
+                Siyuan Li*, <strong>Weiyang Jin*</strong>, Zedong Wang, Fang Wu, Zicheng Liu, Chen Tan, Stan Z. Li
+                <br>
+                <em>International Conference on Learning Representations (ICLR), 2024</em>
+                <br>
+                <span class="links">
+                    <a href="#">https://arxiv.org/abs/2310.03013</a>
+                    <a href="#">https://github.com/Westlake-AI/SemiReward</a>
+                </span>
+            </p>
+        </div>
+        <br><br><br><br>
+
+        <!-- Publication 3 -->
+        <div class="publication">
+            <img src="content/images/wise_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="#">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a>
+                </strong>
+                <br>
+                Yuwei Niu, Munan Ning, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
+                <br>
+                <em>arXiv</em>
+                <br>
+                <span class="links">
+                    <a href="#">https://arxiv.org/abs/2503.07265</a>
+                    <a href="#">https://github.com/PKU-YuanGroup/WISE</a>
+                </span>
+            </p>
+        </div>
+        <br><br><br><br>
+
+        <!-- Publication 4 -->
+        <div class="publication">
+            <img src="content/images/intern_m1_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="#">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a>
+                </strong>
+                <br>
+                Intern Robotics Team
+                <br>
+                <em>arXiv</em>
+                <br>
+                <span class="links">
+                    <a href="#">https://arxiv.org/abs/2510.13778</a>
+                    <a href="#">https://github.com/InternRobotics/InternVLA-M1</a>
+                </span>
+            </p>
+        </div>
+        <br><br>
+
+
+        <!-- Experience Section -->
+        <h2 id="experience" style="color:#8B0000">Experience</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <ul style="font-size: 14px">
+            <li style="margin-bottom: 10px">
+                <span><strong>Shanghai Artificial Intelligence Laboratory, Intern Robotics</strong></span>
+                <div style="float: right;">May 2025 - Aug 2025</div>
+                <br clear="all">
+                <span>Research Intern with Dr. Yilun Chen</span>
+            </li>
+
+            <li style="margin-bottom: 10px">
+                <span><strong>New York University, X-Vision Lab</strong></span>
+                <div style="float: right;">Feb 2024 - May 2025</div>
+                <br clear="all">
+                <span>Research Intern with Prof. Saining Xie</span>
+            </li>
+
+            <li style="margin-bottom: 10px">
+                <span><strong>Westlake University, CAIRI Lab</strong></span>
+                <div style="float: right;">Apr 2023 - Feb 2024</div>
+                <br clear="all">
+                <span>Research Intern with Prof. Stan Z. Li, IEEE Fellow</span>
+            </li>
+
+            <li style="margin-bottom: 10px">
+                <span><strong>Tsinghua University, AIR</strong></span>
+                <div style="float: right;">May 2022 - Apr 2023</div>
+                <br clear="all">
+                <span>Research Intern with Prof. Hao Zhao</span>
+            </li>
+        </ul>
+
+        <!-- Community Contribution Section -->
+        <h2 id="community" style="color:#8B0000">Community Contribution</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <ul style="font-size: 14px">
+            <li style="margin-bottom: 10px">
+                <span><strong>SOTA-Seminar, Founder</strong></span> <br>
+                <span>An academic exchange community driven by interest, dedicated to communication in different fields and holding academic seminars regularly.</span>
+            </li>
+            <li style="margin-bottom: 10px">
+                <span><strong>Lumina, Core-Member</strong></span> <br>
+                <span>The largest embodied intelligence open-source community in China, dedicated to a more open and comprehensive embodied intelligence culture.</span>
+            </li>
+        </ul>
+
+        <!-- Cluster Map Widget -->
+        <div width="80%" style="margin:10px auto;height: 150px; pointer-events: none;">
+            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=bsE8tO7zuYstQlZ4LK-y0ELcK4Uxw6_BtV4Opk5d6GY&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+        </div>
+        <p><br /></p>
+        <hr style="margin-top:80px;margin-bottom:10px;" />
+
+    </div>
+</body>
+</html>
