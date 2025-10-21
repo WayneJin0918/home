@@ -7,6 +7,8 @@
         body {
             background-color: #ffffff;
             font-family: Palatino, 'Times New Roman', serif;
+            font-size: 18px; /* Increased base font size */
+            line-height: 1.6; /* Added for better readability */
         }
         .container {
             background-color: #fff;
@@ -46,7 +48,7 @@
         .publication {
             clear: left;
             padding-bottom: 0px;
-            margin-bottom: 40px; /* Added margin for better spacing */
+            margin-bottom: 20px; /* Reduced margin for smaller spacing */
         }
         .publication p {
             height: 100px;
@@ -58,7 +60,7 @@
         }
         .publication .links {
             position: relative;
-            top: 15px;
+            top: 5px; /* Reduced top margin to bring links closer */
         }
         .publication .links a {
             margin-right: 20px;
@@ -71,9 +73,10 @@
         <!-- Profile Section -->
         <table width="100%" align="center" border="0">
             <tr>
-                <td width="55%" valign="middle">
+                <!-- Increased width for text, decreased for image -->
+                <td width="65%" valign="middle">
                     <h1 style="margin-top:18px;margin-bottom:36px;">WEIYANG JIN</h1>
-                    <p style="font-size:16px; color:rgb(0, 0, 0)">
+                    <p style="font-size:22px; color:rgb(0, 0, 0); line-height: 1.5;">
                         <b style="color: rgb(0, 0, 0)">PhD Student of IDS (MMLab)</b> <br>
                         <span style="color: rgb(0, 0, 0)">University of Hong Kong</span> <br>
                         <span style="color: rgb(0, 0, 0)">Hong Kong, P.R.China</span>
@@ -84,14 +87,14 @@
                         <a href="https://github.com/WayneJin0918/">[GitHub]</a>
                     </p>
                 </td>
-                <td width="45%" align="center">
-                    <img src="content/images/myfigure.jpg" width="100%" />
+                <td width="35%" align="center">
+                    <img src="https://placehold.co/300x400/ccc/fff?text=Profile+Image" width="100%" />
                 </td>
             </tr>
         </table>
 
         <!-- Biography Section -->
-        <h2 id="about-me" style="color:#8B0000">Biography</h2>
+        <h2 id="about-me" style="color:#d82644da">Biography</h2>
         <hr style="margin-top:-16px;margin-bottom:10px;" />
 
         <p>I am a Ph.D. student at MMLab, University of Hong Kong, starting from November 2025.
@@ -101,7 +104,7 @@
         <p>My research interests lie in machine learning, with a particular focus on how to build the visual intelligence via representation and self-evolution.</p>
 
         <!-- News Section -->
-        <h2 id="news" style="color:#8B0000">News</h2>
+        <h2 id="news" style="color:#d82644da">News</h2>
         <hr style="margin-top:-16px;margin-bottom:10px;" />
 
         <ul>
@@ -121,97 +124,84 @@
         </script>
 
         <!-- Selected Projects Section -->
-        <h2 id="publications" style="color:#8B0000">Selected Projects</h2>
+        <h2 id="publications" style="color:#d82644da">Selected Projects</h2>
         <hr style="margin-top:-16px;margin-bottom:10px;" />
 
         <p>*: Equal Contribution, †: Project Leader</p>
 
         <!-- Publication 1 -->
         <div class="publication">
-            <img src="content/images/srum_teaser.png" class="publogo">
+            <img src="https://placehold.co/230x150/eee/aaa?text=SRUM" class="publogo">
             <p>
                 <strong>
-                    <a href="#">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a>
+                    <a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a>
                 </strong>
                 <br>
                 <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu
                 <br>
-                <em>arXiv</em>
-                <br>
                 <span class="links">
-                    <a href="#">https://arxiv.org/abs/2510.12784</a>
-                    <a href="#">https://github.com/WayneJin0918/SRUM</a>
+                    <a href="https://arxiv.org/abs/2510.12784">[Paper]</a>
+                    <a href="https://github.com/WayneJin0918/SRUM">[Code]</a>
                 </span>
             </p>
         </div>
-        <br><br><br><br>
 
         <!-- Publication 2 -->
         <div class="publication">
-            <img src="content/images/semi_teaser.png" class="publogo">
+            <img src="https://placehold.co/230x150/eee/aaa?text=SemiReward" class="publogo">
             <p>
                 <strong>
-                    <a href="#">SemiReward: A General Reward Model for Semi-supervised Learning</a>
+                    <a href="https://arxiv.org/abs/2310.03013">SemiReward: A General Reward Model for Semi-supervised Learning</a>
                 </strong>
                 <br>
                 Siyuan Li*, <strong>Weiyang Jin*</strong>, Zedong Wang, Fang Wu, Zicheng Liu, Chen Tan, Stan Z. Li
                 <br>
-                <em>International Conference on Learning Representations (ICLR), 2024</em>
-                <br>
                 <span class="links">
-                    <a href="#">https://arxiv.org/abs/2310.03013</a>
-                    <a href="#">https://github.com/Westlake-AI/SemiReward</a>
+                    <a href="https://arxiv.org/abs/2310.03013">[Paper]</a>
+                    <a href="https://github.com/Westlake-AI/SemiReward">[Code]</a>
                 </span>
             </p>
         </div>
-        <br><br><br><br>
 
         <!-- Publication 3 -->
         <div class="publication">
-            <img src="content/images/wise_teaser.png" class="publogo">
+            <img src="https://placehold.co/230x150/eee/aaa?text=WISE" class="publogo">
             <p>
                 <strong>
-                    <a href="#">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a>
+                    <a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a>
                 </strong>
                 <br>
                 Yuwei Niu, Munan Ning, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
                 <br>
-                <em>arXiv</em>
-                <br>
                 <span class="links">
-                    <a href="#">https://arxiv.org/abs/2503.07265</a>
-                    <a href="#">https://github.com/PKU-YuanGroup/WISE</a>
+                    <a href="https://arxiv.org/abs/2503.07265">[Paper]</a>
+                    <a href="https://github.com/PKU-YuanGroup/WISE">[Code]</a>
                 </span>
             </p>
         </div>
-        <br><br><br><br>
 
         <!-- Publication 4 -->
         <div class="publication">
-            <img src="content/images/intern_m1_teaser.png" class="publogo">
+            <img src="https://placehold.co/230x150/eee/aaa?text=InternVLA-M1" class="publogo">
             <p>
                 <strong>
-                    <a href="#">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a>
+                    <a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a>
                 </strong>
                 <br>
                 Intern Robotics Team
                 <br>
-                <em>arXiv</em>
-                <br>
                 <span class="links">
-                    <a href="#">https://arxiv.org/abs/2510.13778</a>
-                    <a href="#">https://github.com/InternRobotics/InternVLA-M1</a>
+                    <a href="https://arxiv.org/abs/2510.13778">[Paper]</a>
+                    <a href="https://github.com/InternRobotics/InternVLA-M1">[Code]</a>
                 </span>
             </p>
         </div>
-        <br><br>
-
 
         <!-- Experience Section -->
-        <h2 id="experience" style="color:#8B0000">Experience</h2>
-        <hr style="margin-top:-16px;margin-bottom:10px;" />
+        <h2 id="experience" style="color:#d82644da">Experience</h2>
+        <hr style="margin-top:-10px;margin-bottom:10px;" />
 
-        <ul style="font-size: 14px">
+        <ul style="font-size: 18px;">
             <li style="margin-bottom: 10px">
                 <span><strong>Shanghai Artificial Intelligence Laboratory, Intern Robotics</strong></span>
                 <div style="float: right;">May 2025 - Aug 2025</div>
@@ -242,10 +232,10 @@
         </ul>
 
         <!-- Community Contribution Section -->
-        <h2 id="community" style="color:#8B0000">Community Contribution</h2>
+        <h2 id="community" style="color:#d82644da">Community Contribution</h2>
         <hr style="margin-top:-16px;margin-bottom:10px;" />
 
-        <ul style="font-size: 14px">
+        <ul style="font-size: 18px;">
             <li style="margin-bottom: 10px">
                 <span><strong>SOTA-Seminar, Founder</strong></span> <br>
                 <span>An academic exchange community driven by interest, dedicated to communication in different fields and holding academic seminars regularly.</span>
@@ -266,3 +256,4 @@
     </div>
 </body>
 </html>
+
