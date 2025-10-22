@@ -1,42 +1,336 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        body {
+            background-color: #ffffff;
+            font-family: Palatino, 'Times New Roman', serif;
+            font-size: 18px; /* Increased base font size */
+            line-height: 1.6; /* Added for better readability */
+        }
+        .container {
+            background-color: #fff;
+            zoom: 1;
+            margin-left: auto;
+            margin-right: auto;
+            vertical-align: middle;
+            text-align: left;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px auto;
+        }
+        .content {
+            margin-bottom: -10px;
+            display: inline-block;
+            width: 100%;
+        }
+        a {
+            color: #CC3333; /* Adjusted to a lighter red */
+            text-decoration: none;
+            transition: 0.3s all cubic-bezier(0.42, 0, 0.57, 1.96);
+        }
 
+        a:focus,
+        a:hover {
+            color: #d13f3fd9; /* Slightly darker red for hover */
+            border-color: #d13f3f;
+        }
+        .publogo {
+            width: 230px;
+            max-height: 190px;
+            border: 0;
+            flex-shrink: 0;
+        }
+        .publication {
+            padding-bottom: 0px;
+            margin-bottom: 40px; /* Increased margin for more space */
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .publication p {
+            padding-top: 5px;
+        }
+        .publication strong a {
+            font-size: 17px;
+            color: #0000A0;
+        }
+        .publication .links {
+            position: relative;
+            top: 5px; /* Reduced top margin to bring links closer */
+        }
+        .publication .links a {
+            margin-right: 10px;
+        }
 
-Example project pages built using this template are:
-- https://www.vision.huji.ac.il/deepsim/
-- https://www.vision.huji.ac.il/3d_ads/
-- https://www.vision.huji.ac.il/ssrl_ad/
-- https://www.vision.huji.ac.il/conffusion/
+        /* --- New Styles for Interactive Photo --- */
+        .flip-card {
+            display: inline-block;
+            background-color: transparent;
+            width: 85%; /* Adjusted width for better fit */
+            max-width: 250px; /* Max width for larger screens */
+            aspect-ratio: 1 / 1;
+            perspective: 1000px; /* Creates the 3D effect */
+            cursor: pointer;
+        }
 
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+            border-radius: 50%; /* Makes the card circular */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
 
-## Start using the template
-To start using the template click on `Use this Template`.
+        /* This class is added by JavaScript on click */
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* For Safari */
+            backface-visibility: hidden;
+            border-radius: 50%;
+            overflow: hidden; /* Ensures the image stays within the circle */
+        }
 
-## Components
-- Teaser video
-- Images Carousel
-- Youtube embedding
-- Video Carousel
-- PDF Poster
-- Bibtex citation
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
 
-## Tips:
-- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
-- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
-(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
-- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
-- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
-- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
-- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
-- This project page can also be made into a github pages website.
-- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
-- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
+        .flip-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents the image from stretching */
+        }
 
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
+    </style>
+    <title>Weiyang Jin's Homepage</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <table width="100%" align="center" border="0">
+            <tr>
+                <!-- Increased width for text, decreased for image -->
+                <td width="65%" valign="middle">
+                    <h1 style="margin-top:18px;margin-bottom:36px;">WEIYANG JIN</h1>
+                    <p style="font-size:22px; color:rgb(0, 0, 0); line-height: 1.5;">
+                        <b style="color: rgb(0, 0, 0)">PhD Student of IDS (MMLab)</b> <br>
+                        <span style="color: rgb(0, 0, 0)">University of Hong Kong</span> <br>
+                        <span style="color: rgb(0, 0, 0)">Hong Kong, P.R.China</span>
+                        <br><br>
+                        Email: wayneyjin [at] gmail [dot] com
+                    </p>
+                    <p>
+                        <a href="https://github.com/WayneJin0918/">[GitHub]</a> <a href="https://x.com/JinWeiyang18434">[twitter/X]</a> <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW">[Scholar]</a>
+                    </p>
+                    <p>
+                        <span style="color: #4f0fa4b2;"><strong>I'm looking for industrial internship opportunities about UMMs!!!</strong></span>
+                    </p>
+                </td>
+                <td width="50%" align="center">
+                    <!-- Interactive Photo Card -->
+                    <div class="flip-card" id="profileCard">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <!-- Your original image -->
+                                <img src="content/images/myfigure.jpg" 
+                                     onerror="this.onerror=null;this.src='https://placehold.co/400x400/EFEFEF/333?text=Front+Photo';" 
+                                     alt="Weiyang Jin's Photo">
+                            </div>
+                            <div class="flip-card-back">
+                                <!-- Replace this with your second image -->
+                                <img src="content/images/yuanshao.jpg" 
+                                     alt="Another photo of Weiyang Jin">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
 
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        <!-- Biography Section -->
+        <h2 id="about-me" style="color:#d82644da">Biography</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <p>I am a Ph.D. student at MMLab, University of Hong Kong, starting from November 2025, supervised by Prof. Xihui Liu.
+     Prior to that, I obtained my Bachelor of Engineering degree in EE from Beijing Jiaotong University (from 2021 to 2025). My research interests lie in machine learning, with a particular focus on how to build the visual intelligence via representation and self-evolution.</p>
+
+        <!-- News Section -->
+        <h2 id="news" style="color:#d82644da">News</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <ul>
+            <li>[2025/10] Will join in <span style="color: #FF4500;"><a href="https://mmlab.hk/">HKU-MMLab</a></span> and start my PhD career.</li>
+        </ul>
+
+        <!-- JavaScript Function -->
+        <script type="text/javascript">
+            function hideshow(which) {
+                if (!document.getElementById)
+                    return
+                if (which.style.display == "block")
+                    which.style.display = "none"
+                else
+                    which.style.display = "block"
+            }
+        </script>
+
+        <!-- Selected Projects Section -->
+        <h2 id="publications" style="color:#d82644da">Selected Projects</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <p>*: Equal Contribution, †: Project Leader</p>
+
+        <!-- Publication 1 -->
+        <div class="publication">
+            <img src="content/images/srum_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a>
+                </strong>
+                <br>
+                <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu
+                <br>
+                <span class="links">
+                    <a href="https://arxiv.org/abs/2510.12784">[Paper]</a>
+                    <a href="https://github.com/WayneJin0918/SRUM">[Code]</a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Publication 2 -->
+        <div class="publication">
+            <img src="content/images/semi_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="https://arxiv.org/abs/2310.03013">SemiReward: A General Reward Model for Semi-supervised Learning</a>
+                </strong>
+                <br>
+                Siyuan Li*, <strong>Weiyang Jin*</strong>, Zedong Wang, Fang Wu, Zicheng Liu, Chen Tan, Stan Z. Li
+                <br>
+                <span class="links">
+                    <a href="https://arxiv.org/abs/2310.03013">[Paper]</a>
+                    <a href="https://github.com/Westlake-AI/SemiReward">[Code]</a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Publication 3 -->
+        <div class="publication">
+            <img src="content/images/wise_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a>
+                </strong>
+                <br>
+                Yuwei Niu, Munan Ning, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
+                <br>
+                <span class="links">
+                    <a href="https://arxiv.org/abs/2503.07265">[Paper]</a>
+                    <a href="https://github.com/PKU-YuanGroup/WISE">[Code]</a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Publication 4 -->
+        <div class="publication">
+            <img src="content/images/intern_m1_teaser.png" class="publogo">
+            <p>
+                <strong>
+                    <a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a>
+                </strong>
+                <br>
+                Intern Robotics Team
+                <br>
+                <span class="links">
+                    <a href="https://arxiv.org/abs/2510.13778">[Paper]</a>
+                    <a href="https://github.com/InternRobotics/InternVLA-M1">[Code]</a>
+                </span>
+            </p>
+        </div>
+
+        <!-- Experience Section -->
+        <h2 id="experience" style="color:#d82644da">Experience</h2>
+        <hr style="margin-top:5px;margin-bottom:10px;" />
+
+        <ul style="font-size: 18px;">
+            <li style="margin-bottom: 10px">
+                <span><strong>Shanghai Artificial Intelligence Laboratory, Intern Robotics</strong></span>
+                <div style="float: right;">May 2025 - Aug 2025</div>
+                <br clear="all">
+                <span>Research Intern with Dr. Yilun Chen</span>
+            </li>
+
+            <li style="margin-bottom: 10px">
+                <span><strong>New York University, Vision-X Lab</strong></span>
+                <div style="float: right;">Feb 2024 - May 2025</div>
+                <br clear="all">
+                <span>Research Intern with Prof. Saining Xie</span>
+            </li>
+
+            <li style="margin-bottom: 10px">
+                <span><strong>Westlake University, CAIRI Lab</strong></span>
+                <div style="float: right;">Apr 2023 - Feb 2024</div>
+                <br clear="all">
+                <span>Research Intern with Prof. Stan Z. Li, IEEE Fellow</span>
+            </li>
+
+            <li style="margin-bottom: 10px">
+                <span><strong>Tsinghua University, AIR</strong></span>
+                <div style="float: right;">May 2022 - Apr 2023</div>
+                <br clear="all">
+                <span>Research Intern with Prof. Hao Zhao</span>
+            </li>
+        </ul>
+
+        <!-- Community Contribution Section -->
+        <h2 id="community" style="color:#d82644da">Community Contribution</h2>
+        <hr style="margin-top:-16px;margin-bottom:10px;" />
+
+        <ul style="font-size: 18px;">
+            <li style="margin-bottom: 10px">
+                <span><strong><a href="https://discord.com/channels/1423127189980708937/1423127194498105469">SOTA-Seminar</a>, Founder</strong></span> <br>
+                <span>An academic exchange community driven by interest, dedicated to communication in different fields and holding academic seminars regularly.</span>
+            </li>
+            <li style="margin-bottom: 10px">
+                <span><strong><a href="https://lumina-embodied.ai">Lumina</a>, Core-Member</strong></span> <br>
+                <span>The largest embodied intelligence open-source community in China, dedicated to a more open and comprehensive embodied intelligence culture.</span>
+            </li>
+        </ul>
+
+        <!-- Cluster Map Widget -->
+        <div width="50%" style="margin:10px auto;height: 75px; pointer-events: none;">
+<script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=200&t=n&d=brwlopD_X1SJb71ZKzhbbh4yHxbCpuxCc085RxIyWUc'></script>
+        </div>
+        <p><br /></p>
+        <hr style="margin-top:80px;margin-bottom:10px;" />
+
+    </div>
+
+    <script>
+        // JavaScript to handle the click event for the photo
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.getElementById('profileCard');
+            if (card) {
+                card.addEventListener('click', function() {
+                    // Toggles the 'flipped' class to trigger the CSS animation
+                    card.classList.toggle('flipped');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
