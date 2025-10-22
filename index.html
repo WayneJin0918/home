@@ -65,6 +65,53 @@
         .publication .links a {
             margin-right: 10px;
         }
+
+        /* --- New Styles for Interactive Photo --- */
+        .flip-card {
+            display: inline-block;
+            background-color: transparent;
+            width: 85%; /* Adjusted width for better fit */
+            max-width: 250px; /* Max width for larger screens */
+            aspect-ratio: 1 / 1;
+            perspective: 1000px; /* Creates the 3D effect */
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+            border-radius: 50%; /* Makes the card circular */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        /* This class is added by JavaScript on click */
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden; /* For Safari */
+            backface-visibility: hidden;
+            border-radius: 50%;
+            overflow: hidden; /* Ensures the image stays within the circle */
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents the image from stretching */
+        }
+
     </style>
     <title>Weiyang Jin's Homepage</title>
 </head>
@@ -87,14 +134,30 @@
                         <a href="https://github.com/WayneJin0918/">[GitHub]</a> <a href="https://x.com/JinWeiyang18434">[twitter/X]</a> <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW">[Scholar]</a>
                     </p>
                     <p>
-                        <span style="color: #4f0fa4b2;"><strong>I'm looking for industrial internship opportunities about UMMs!!!</strong></li>
+                        <span style="color: #4f0fa4b2;"><strong>I'm looking for industrial internship opportunities about UMMs!!!</strong></span>
                     </p>
                 </td>
                 <td width="35%" align="center">
-                    <img src="content/images/myfigure.jpg" width="75%" />
+                    <!-- Interactive Photo Card -->
+                    <div class="flip-card" id="profileCard">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <!-- Your original image -->
+                                <img src="content/images/myfigure.jpg" 
+                                     onerror="this.onerror=null;this.src='https://placehold.co/400x400/EFEFEF/333?text=Front+Photo';" 
+                                     alt="Weiyang Jin's Photo">
+                            </div>
+                            <div class="flip-card-back">
+                                <!-- Replace this with your second image -->
+                                <img src="content/images/yuanshao.jpg" 
+                                     alt="Another photo of Weiyang Jin">
+                            </div>
+                        </div>
+                    </div>
                 </td>
             </tr>
         </table>
+    </div>
 
         <!-- Biography Section -->
         <h2 id="about-me" style="color:#d82644da">Biography</h2>
@@ -254,6 +317,20 @@
         <hr style="margin-top:80px;margin-bottom:10px;" />
 
     </div>
+
+    <script>
+        // JavaScript to handle the click event for the photo
+        document.addEventListener('DOMContentLoaded', function() {
+            const card = document.getElementById('profileCard');
+            if (card) {
+                card.addEventListener('click', function() {
+                    // Toggles the 'flipped' class to trigger the CSS animation
+                    card.classList.toggle('flipped');
+                });
+            }
+        });
+    </script>
+
 </body>
 </html>
 
