@@ -231,7 +231,7 @@
                         
                         // 英文设置
                         ctx.font = 'italic 28px Palatino, serif'; // 放大字体以匹配Canvas分辨率
-                        const englishText = "This is Yuan Shao, I think he is the coolest character in the Three Kingdoms.";
+                        const englishText = "This is 袁绍 (Yuan Shao), I think he is the coolest character in the Three Kingdoms.";
                         const lineHeight = 36;
                         let textY = centerY + radius + 50; // 文字起始高度
 
@@ -242,9 +242,6 @@
                         // 为了简单，我们让wrapText返回最后的Y坐标，或者手动估算
                         // 这里我们手动加一点距离，作为中文的起始
                         
-                        // 绘制中文
-                        ctx.font = 'italic 26px Palatino, serif';
-                        const chineseText = "这是袁绍，我觉得三国最酷的人物";
                         // 这里我们由于不知道英文具体换了几行，我们估算一下大概位置
                         // 或者更严谨的方法是写一个函数计算高度。
                         // 为了确保不重叠，我们把中文画在画布最底部靠上的位置，或者基于英文行数。
