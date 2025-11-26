@@ -206,7 +206,7 @@
                     const centerY = radius + 10; // 圆心垂直位置
                     
                     const img = new Image();
-                    img.src = 'content/images/yuanshao.jpg'; 
+                    img.src = 'content/images/photo.jpg'; 
                     
                     // 如果图片加载失败，显示灰色占位图
                     img.onerror = function() {
@@ -223,32 +223,32 @@
 
                         // 绘制图片 (拉伸以填满圆所在的矩形区域)
                         ctx.drawImage(img, centerX - radius, centerY - radius, radius * 2, radius * 2);
-                        ctx.restore(); // 恢复状态，取消裁剪限制，以便在圆外写字
+                        // ctx.restore(); // 恢复状态，取消裁剪限制，以便在圆外写字
 
-                        // 3. 绘制文字
-                        ctx.textAlign = 'center';
-                        ctx.fillStyle = '#555555'; // 文字颜色
+                        // // 3. 绘制文字
+                        // ctx.textAlign = 'center';
+                        // ctx.fillStyle = '#555555'; // 文字颜色
                         
-                        // 英文设置
-                        ctx.font = 'italic 28px Palatino, serif'; // 放大字体以匹配Canvas分辨率
-                        const englishText = "This is 袁绍 (Yuan Shao), I think he is the coolest character in the Three Kingdoms.";
-                        const lineHeight = 36;
-                        let textY = centerY + radius + 50; // 文字起始高度
+                        // // 英文设置
+                        // ctx.font = 'italic 28px Palatino, serif'; // 放大字体以匹配Canvas分辨率
+                        // const englishText = "This is 袁绍 (Yuan Shao), I think he is the coolest character in the Three Kingdoms.";
+                        // const lineHeight = 36;
+                        // let textY = centerY + radius + 50; // 文字起始高度
 
-                        // 英文自动换行逻辑
-                        wrapText(ctx, englishText, centerX, textY, 560, lineHeight);
+                        // // 英文自动换行逻辑
+                        // wrapText(ctx, englishText, centerX, textY, 560, lineHeight);
                         
-                        // 计算中文开始的位置 (假设英文占了2-3行)
-                        // 为了简单，我们让wrapText返回最后的Y坐标，或者手动估算
-                        // 这里我们手动加一点距离，作为中文的起始
+                        // // 计算中文开始的位置 (假设英文占了2-3行)
+                        // // 为了简单，我们让wrapText返回最后的Y坐标，或者手动估算
+                        // // 这里我们手动加一点距离，作为中文的起始
                         
-                        // 这里我们由于不知道英文具体换了几行，我们估算一下大概位置
-                        // 或者更严谨的方法是写一个函数计算高度。
-                        // 为了确保不重叠，我们把中文画在画布最底部靠上的位置，或者基于英文行数。
+                        // // 这里我们由于不知道英文具体换了几行，我们估算一下大概位置
+                        // // 或者更严谨的方法是写一个函数计算高度。
+                        // // 为了确保不重叠，我们把中文画在画布最底部靠上的位置，或者基于英文行数。
                         
-                        // 重新计算Y位置：简单的换行函数会直接画，我们这里简单再调用一次
-                        // 为了美观，我们硬编码中文位置在英文下方约100像素处（预留3行英文空间）
-                        ctx.fillText(chineseText, centerX, textY + (lineHeight * 3));
+                        // // 重新计算Y位置：简单的换行函数会直接画，我们这里简单再调用一次
+                        // // 为了美观，我们硬编码中文位置在英文下方约100像素处（预留3行英文空间）
+                        // ctx.fillText(chineseText, centerX, textY + (lineHeight * 3));
                     };
                 }
 
