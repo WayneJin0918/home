@@ -1,288 +1,502 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiyang Jin's Homepage</title>
+    
+    <!-- 引入 Google Fonts 提升排版质感 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- 引入 FontAwesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style type="text/css">
+        :root {
+            --primary-color: #0056b3; /* 经典的学术蓝 */
+            --accent-color: #d82644;   /* 强调色 */
+            --text-color: #333333;
+            --bg-color: #ffffff;
+            --secondary-text: #666666;
+            --link-hover: #b32424;
+        }
+
         body {
-            background-color: #ffffff;
-            font-family: Palatino, 'Times New Roman', serif;
-            font-size: 18px;
-            line-height: 1.6;
+            background-color: var(--bg-color);
+            font-family: 'Lato', sans-serif; /* 正文使用无衬线字体 */
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
         }
-        .container {
-            background-color: #fff;
-            zoom: 1;
-            margin-left: auto;
-            margin-right: auto;
-            vertical-align: middle;
-            text-align: left;
-            width: 100%;
-            max-width: 800px;
-            padding: 20px;
-            margin: 20px auto;
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif; /* 标题使用衬线字体 */
+            font-weight: 700;
         }
+
         a {
-            color: #CC3333;
+            color: var(--primary-color);
             text-decoration: none;
-            transition: 0.3s all cubic-bezier(0.42, 0, 0.57, 1.96);
+            transition: color 0.2s ease;
         }
-        a:focus, a:hover {
-            color: #d13f3fd9;
-            border-color: #d13f3f;
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
         }
-        .publogo {
-            width: 230px;
-            max-height: 190px;
-            border: 0;
-            flex-shrink: 0;
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .publication {
-            margin-bottom: 40px;
+
+        /* --- Header Section (Profile & Bio) --- */
+        .profile-header {
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+
+        .bio-text {
+            flex: 1;
+        }
+
+        .bio-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            margin-top: 0;
+            letter-spacing: -0.5px;
+        }
+
+        .bio-text p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
             gap: 15px;
         }
-        .publication strong a {
-            font-size: 17px;
-            color: #0000A0;
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #f4f4f4;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #444;
+            text-decoration: none;
+            transition: all 0.2s;
         }
-        .publication .links {
-            position: relative;
-            top: 5px;
+
+        .social-links a:hover {
+            background: #e0e0e0;
+            color: #000;
+            transform: translateY(-2px);
         }
-        .publication .links a {
-            margin-right: 10px;
+
+        .highlight-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 10px 15px;
+            margin-top: 20px;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95rem;
+            color: #000;
         }
-        
-        /* --- Canvas Container Styles --- */
+
+        /* --- Canvas Wrapper --- */
         .canvas-container {
-            width: 100%;
-            max-width: 320px; /* 限制最大宽度 */
+            flex-shrink: 0;
+            width: 380px;
+            height: 380px;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
-        
+
         canvas {
-            /* 让 Canvas 响应式缩放，但保持清晰度 */
             width: 100%;
             height: auto;
+            max-width: 100%;
+        }
+
+        /* --- Section Styling --- */
+        .section-title {
+            color: var(--accent-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* --- Publications --- */
+        .publication {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 35px;
+            align-items: flex-start;
+        }
+
+        .publogo {
+            width: 200px;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+
+        .pub-content strong a {
+            font-size: 1.15rem;
+            color: #1a1a1a;
+            font-family: 'Merriweather', serif;
+        }
+
+        .pub-content .authors {
+            color: #555;
+            margin: 6px 0;
+            font-size: 0.95rem;
+        }
+
+        .pub-content .links {
+            margin-top: 8px;
+        }
+
+        .pub-content .links a {
+            display: inline-block;
+            margin-right: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* --- Experience & List Items --- */
+        .experience-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 15px;
+        }
+
+        .exp-details strong {
+            display: block;
+            font-size: 1.05rem;
+            color: #222;
+        }
+        
+        .exp-details span {
+            color: #555;
+        }
+
+        .exp-date {
+            text-align: right;
+            min-width: 120px;
+            color: #777;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* --- Footer --- */
+        .visitor-map {
+            margin-top: 60px;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .bio-text h1 {
+                font-size: 2rem;
+            }
+
+            .social-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .canvas-container {
+                width: 280px;
+                height: 280px;
+            }
+
+            .publication {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .publogo {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .experience-item {
+                flex-direction: column;
+            }
+            
+            .exp-date {
+                text-align: left;
+                margin-top: 4px;
+            }
         }
     </style>
-    <title>Weiyang Jin's Homepage</title>
 </head>
 <body>
+
     <div class="container">
-        <table width="100%" align="center" border="0">
-            <tr>
-                <td width="65%" valign="middle">
-                    <h1 style="margin-top:18px;margin-bottom:36px;">WEIYANG JIN</h1>
-                    <p style="font-size:22px; color:rgb(0, 0, 0); line-height: 1.5;">
-                        <b style="color: rgb(0, 0, 0)">PhD Student of IDS (MMLab)</b> <br>
-                        <span style="color: rgb(0, 0, 0)">University of Hong Kong</span> <br>
-                        <span style="color: rgb(0, 0, 0)">Hong Kong, P.R.China</span>
-                        <br><br>
-                        Email: wayneyjin [at] gmail [dot] com
-                    </p>
-                    <p>
-                        <a href="https://github.com/WayneJin0918/">[GitHub]</a> <a href="https://x.com/JinWeiyang18434">[twitter/X]</a> <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW">[Scholar]</a>
-                    </p>
-                    <p>
-                        <span style="color: #4f0fa4b2;"><strong>I'm looking for industrial internship opportunities about UMMs!!!</strong></li>
-                    </p>
-                </td>
-                
-                <td width="50%" align="center" valign="top">
-                    <div class="canvas-container">
-                        <canvas id="profileCanvas" width="600" height="900"></canvas>
-                    </div>
-                </td>
-            </tr>
-        </table>
-
-        <h2 id="about-me" style="color:#d82644da">Biography</h2>
-        <hr style="margin-top:-16px;margin-bottom:10px;" />
-        <p>I am a Ph.D. student at MMLab, University of Hong Kong, starting from November 2025, supervised by Prof. Xihui Liu. Prior to that, I obtained my Bachelor of Engineering degree in EE from Beijing Jiaotong University (from 2021 to 2025). My research interests lie in machine learning, with a particular focus on how to build the visual intelligence via representation and self-evolution.</p>
-
-        <h2 id="news" style="color:#d82644da">News</h2>
-        <hr style="margin-top:-16px;margin-bottom:10px;" />
-        <ul>
-            <li>[2025/10] Will join in <span style="color: #FF4500;"><a href="https://mmlab.hk/">HKU-MMLab</a></span> and start my PhD career.</li>
-        </ul>
-
-        <h2 id="publications" style="color:#d82644da">Selected Projects</h2>
-        <hr style="margin-top:-16px;margin-bottom:10px;" />
-        <p>*: Equal Contribution, †: Project Leader</p>
-
-        <div class="publication">
-            <img src="content/images/unisandbox.png" class="publogo">
-            <p>
-                <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a></strong><br>
-                Yuwei Niu*, <strong>Weiyang Jin*</strong>, Jiaqi Liao, Chaoran Feng, Peng Jin, Bin Lin, Zongjian Li, Bin Zhu, Weihao Yu, Li Yuan<br>
-                <span class="links"><a href="https://arxiv.org/abs/2511.20561">[Paper]</a> <a href="https://github.com/PKU-YuanGroup/UniSandBox">[Code]</a></span>
-            </p>
-        </div>
-
-        <div class="publication">
-            <img src="content/images/srum_teaser.png" class="publogo">
-            <p>
-                <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a></strong><br>
-                <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu<br>
-                <span class="links"><a href="https://arxiv.org/abs/2510.12784">[Paper]</a> <a href="https://github.com/WayneJin0918/SRUM">[Code]</a></span>
-            </p>
-        </div>
-
-        <div class="publication">
-            <img src="content/images/semi_teaser.png" class="publogo">
-            <p>
-                <strong><a href="https://arxiv.org/abs/2310.03013">SemiReward: A General Reward Model for Semi-supervised Learning</a></strong><br>
-                Siyuan Li*, <strong>Weiyang Jin*</strong>, Zedong Wang, Fang Wu, Zicheng Liu, Chen Tan, Stan Z. Li<br>
-                <span class="links"><a href="https://arxiv.org/abs/2310.03013">[Paper]</a> <a href="https://github.com/Westlake-AI/SemiReward">[Code]</a></span>
-            </p>
-        </div>
         
-         <div class="publication">
-            <img src="content/images/wise_teaser.png" class="publogo">
-            <p>
-                <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a></strong><br>
-                Yuwei Niu, Munan Ning, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan<br>
-                <span class="links"><a href="https://arxiv.org/abs/2503.07265">[Paper]</a> <a href="https://github.com/PKU-YuanGroup/WISE">[Code]</a></span>
-            </p>
-        </div>
+        <!-- Header Section -->
+        <header class="profile-header">
+            <div class="bio-text">
+                <h1>WEIYANG JIN</h1>
+                <p>
+                    <b>PhD Student of IDS (MMLab)</b><br>
+                    University of Hong Kong<br>
+                    <span style="color: #666;">Hong Kong, P.R.China</span>
+                </p>
+                <p>
+                    Email: <a href="mailto:wayneyjin@gmail.com">wayneyjin [at] gmail [dot] com</a>
+                </p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/WayneJin0918/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://x.com/JinWeiyang18434" target="_blank"><i class="fab fa-twitter"></i> Twitter/X</a>
+                    <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                </div>
 
-        <div class="publication">
-            <img src="content/images/intern_m1_teaser.png" class="publogo">
-            <p>
-                <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a></strong><br>
-                Intern Robotics Team<br>
-                <span class="links"><a href="https://arxiv.org/abs/2510.13778">[Paper]</a> <a href="https://github.com/InternRobotics/InternVLA-M1">[Code]</a></span>
-            </p>
-        </div>
+                <div class="highlight-box">
+                    <i class="fas fa-bullhorn" style="margin-right: 8px;"></i> 
+                    <strong>I'm looking for industrial internship opportunities about UMMs!!!</strong>
+                </div>
+            </div>
 
-        <h2 id="experience" style="color:#d82644da">Experience</h2>
-        <hr style="margin-top:5px;margin-bottom:10px;" />
-        <ul style="font-size: 18px;">
-            <li style="margin-bottom: 10px">
-                <span><strong>Shanghai Artificial Intelligence Laboratory, Intern Robotics</strong></span>
-                <div style="float: right;">May 2025 - Aug 2025</div><br clear="all">
-                <span>Research Intern with Dr. Yilun Chen</span>
-            </li>
-            <li style="margin-bottom: 10px">
-                <span><strong>New York University, Vision-X Lab</strong></span>
-                <div style="float: right;">Feb 2024 - May 2025</div><br clear="all">
-                <span>Research Intern with Prof. Saining Xie</span>
-            </li>
-            <li style="margin-bottom: 10px">
-                <span><strong>Westlake University, CAIRI Lab</strong></span>
-                <div style="float: right;">Apr 2023 - Feb 2024</div><br clear="all">
-                <span>Research Intern with Prof. Stan Z. Li, IEEE Fellow</span>
-            </li>
-            <li style="margin-bottom: 10px">
-                <span><strong>Tsinghua University, AIR</strong></span>
-                <div style="float: right;">May 2022 - Apr 2023</div><br clear="all">
-                <span>Research Intern with Prof. Hao Zhao</span>
-            </li>
-        </ul>
+            <div class="canvas-container">
+                <canvas id="profileCanvas" width="600" height="600"></canvas>
+            </div>
+        </header>
 
-        <h2 id="community" style="color:#d82644da">Community Contribution</h2>
-        <hr style="margin-top:-16px;margin-bottom:10px;" />
-        <ul style="font-size: 18px;">
-            <li style="margin-bottom: 10px">
-                <span><strong><a href="https://discord.com/channels/1423127189980708937/1423127194498105469">SOTA-Seminar</a>, Founder</strong></span> <br>
-                <span>An academic exchange community driven by interest, dedicated to communication in different fields and holding academic seminars regularly.</span>
-            </li>
-            <li style="margin-bottom: 10px">
-                <span><strong><a href="https://lumina-embodied.ai">Lumina</a>, Core-Member</strong></span> <br>
-                <span>The largest embodied intelligence open-source community in China, dedicated to a more open and comprehensive embodied intelligence culture.</span>
-            </li>
-        </ul>
+        <!-- About Me -->
+        <section>
+            <h2 id="about-me" class="section-title">Biography</h2>
+            <p>I am a Ph.D. student at <strong>MMLab, University of Hong Kong</strong>, starting from November 2025, supervised by <a href="#">Prof. Xihui Liu</a>. Prior to that, I obtained my Bachelor of Engineering degree in EE from Beijing Jiaotong University (2021-2025). My research interests lie in machine learning, with a particular focus on how to build visual intelligence via representation and self-evolution.</p>
+        </section>
 
-        <div width="50%" style="margin:10px auto;height: 75px; pointer-events: none;">
+        <!-- News -->
+        <section>
+            <h2 id="news" class="section-title">News</h2>
+            <ul>
+                <li><span style="font-family: monospace; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">2025/10</span> Will join in <a href="https://mmlab.hk/">HKU-MMLab</a> and start my PhD career.</li>
+            </ul>
+        </section>
+
+        <!-- Publications -->
+        <section>
+            <h2 id="publications" class="section-title">Selected Projects</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">(*: Equal Contribution, †: Project Leader)</p>
+
+            <!-- Pub 1 -->
+            <div class="publication">
+                <img src="content/images/unisandbox.png" class="publogo" alt="UniSandBox Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a></strong>
+                    <div class="authors">
+                        Yuwei Niu*, <strong>Weiyang Jin*</strong>, Jiaqi Liao, Chaoran Feng, Peng Jin, Bin Lin, Zongjian Li, Bin Zhu, Weihao Yu, Li Yuan
+                    </div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2511.20561"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/PKU-YuanGroup/UniSandBox"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pub 2 -->
+            <div class="publication">
+                <img src="content/images/srum_teaser.png" class="publogo" alt="SRUM Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a></strong>
+                    <div class="authors">
+                        <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu
+                    </div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2510.12784"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/WayneJin0918/SRUM"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pub 3 -->
+            <div class="publication">
+                <img src="content/images/semi_teaser.png" class="publogo" alt="SemiReward Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2310.03013">SemiReward: A General Reward Model for Semi-supervised Learning</a></strong>
+                    <div class="authors">
+                        Siyuan Li*, <strong>Weiyang Jin*</strong>, Zedong Wang, Fang Wu, Zicheng Liu, Chen Tan, Stan Z. Li
+                    </div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2310.03013"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/Westlake-AI/SemiReward"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pub 4 -->
+             <div class="publication">
+                <img src="content/images/wise_teaser.png" class="publogo" alt="WISE Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a></strong>
+                    <div class="authors">
+                        Yuwei Niu, Munan Ning, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
+                    </div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2503.07265"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/PKU-YuanGroup/WISE"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pub 5 -->
+            <div class="publication">
+                <img src="content/images/intern_m1_teaser.png" class="publogo" alt="InternVLA Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a></strong>
+                    <div class="authors">
+                        Intern Robotics Team
+                    </div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2510.13778"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/InternRobotics/InternVLA-M1"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section>
+            <h2 id="experience" class="section-title">Experience</h2>
+            <ul class="experience-list">
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong>Shanghai Artificial Intelligence Laboratory, Intern Robotics</strong>
+                        <span>Research Intern with Dr. Yilun Chen</span>
+                    </div>
+                    <div class="exp-date">May 2025 - Aug 2025</div>
+                </li>
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong>New York University, Vision-X Lab</strong>
+                        <span>Research Intern with Prof. Saining Xie</span>
+                    </div>
+                    <div class="exp-date">Feb 2024 - May 2025</div>
+                </li>
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong>Westlake University, CAIRI Lab</strong>
+                        <span>Research Intern with Prof. Stan Z. Li, IEEE Fellow</span>
+                    </div>
+                    <div class="exp-date">Apr 2023 - Feb 2024</div>
+                </li>
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong>Tsinghua University, AIR</strong>
+                        <span>Research Intern with Prof. Hao Zhao</span>
+                    </div>
+                    <div class="exp-date">May 2022 - Apr 2023</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Community -->
+        <section>
+            <h2 id="community" class="section-title">Community Contribution</h2>
+            <ul class="experience-list">
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong><a href="https://discord.com/channels/1423127189980708937/1423127194498105469">SOTA-Seminar</a>, Founder</strong>
+                        <span style="display:block; margin-top:5px; font-size: 0.95rem;">An academic exchange community driven by interest, dedicated to communication in different fields and holding academic seminars regularly.</span>
+                    </div>
+                </li>
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong><a href="https://lumina-embodied.ai">Lumina</a>, Core-Member</strong>
+                        <span style="display:block; margin-top:5px; font-size: 0.95rem;">The largest embodied intelligence open-source community in China, dedicated to a more open and comprehensive embodied intelligence culture.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <div class="visitor-map">
             <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=200&t=n&d=brwlopD_X1SJb71ZKzhbbh4yHxbCpuxCc085RxIyWUc'></script>
         </div>
-        <p><br /></p>
-        <hr style="margin-top:80px;margin-bottom:10px;" />
 
-        <script>
-            window.onload = function() {
-                const canvas = document.getElementById('profileCanvas');
-                if (canvas && canvas.getContext) {
-                    const ctx = canvas.getContext('2d');
-                    
-                    // 1. 设置基础参数
-                    const centerX = canvas.width / 2; // 300
-                    const radius = 280; // 圆的半径 (稍微留点边距，总宽600)
-                    const centerY = radius + 10; // 圆心垂直位置
-                    
-                    const img = new Image();
-                    img.src = 'content/images/photo.jpg'; 
-                    
-                    // 如果图片加载失败，显示灰色占位图
-                    img.onerror = function() {
-                        img.src = 'https://placehold.co/600x600/EFEFEF/333?text=Image+Not+Found';
-                    };
-
-                    img.onload = function() {
-                        // 2. 绘制圆形图片
-                        ctx.save(); // 保存当前状态
-                        ctx.beginPath();
-                        ctx.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
-                        ctx.closePath();
-                        ctx.clip(); // 将后续绘图限制在圆内
-
-                        // 绘制图片 (拉伸以填满圆所在的矩形区域)
-                        ctx.drawImage(img, centerX - radius, centerY - radius, radius * 2, radius * 2);
-                        // ctx.restore(); // 恢复状态，取消裁剪限制，以便在圆外写字
-
-                        // // 3. 绘制文字
-                        // ctx.textAlign = 'center';
-                        // ctx.fillStyle = '#555555'; // 文字颜色
-                        
-                        // // 英文设置
-                        // ctx.font = 'italic 28px Palatino, serif'; // 放大字体以匹配Canvas分辨率
-                        // const englishText = "This is 袁绍 (Yuan Shao), I think he is the coolest character in the Three Kingdoms.";
-                        // const lineHeight = 36;
-                        // let textY = centerY + radius + 50; // 文字起始高度
-
-                        // // 英文自动换行逻辑
-                        // wrapText(ctx, englishText, centerX, textY, 560, lineHeight);
-                        
-                        // // 计算中文开始的位置 (假设英文占了2-3行)
-                        // // 为了简单，我们让wrapText返回最后的Y坐标，或者手动估算
-                        // // 这里我们手动加一点距离，作为中文的起始
-                        
-                        // // 这里我们由于不知道英文具体换了几行，我们估算一下大概位置
-                        // // 或者更严谨的方法是写一个函数计算高度。
-                        // // 为了确保不重叠，我们把中文画在画布最底部靠上的位置，或者基于英文行数。
-                        
-                        // // 重新计算Y位置：简单的换行函数会直接画，我们这里简单再调用一次
-                        // // 为了美观，我们硬编码中文位置在英文下方约100像素处（预留3行英文空间）
-                        // ctx.fillText(chineseText, centerX, textY + (lineHeight * 3));
-                    };
-                }
-
-                // 辅助函数：处理文字换行
-                function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
-                    var words = text.split(' ');
-                    var line = '';
-
-                    for(var n = 0; n < words.length; n++) {
-                        var testLine = line + words[n] + ' ';
-                        var metrics = ctx.measureText(testLine);
-                        var testWidth = metrics.width;
-                        if (testWidth > maxWidth && n > 0) {
-                            ctx.fillText(line, x, y);
-                            line = words[n] + ' ';
-                            y += lineHeight;
-                        }
-                        else {
-                            line = testLine;
-                        }
-                    }
-                    ctx.fillText(line, x, y);
-                }
-            };
-        </script>
     </div>
+
+    <script>
+        window.onload = function() {
+            const canvas = document.getElementById('profileCanvas');
+            if (canvas && canvas.getContext) {
+                const ctx = canvas.getContext('2d');
+                
+                // 设置画布尺寸和中心
+                const centerX = canvas.width / 2;
+                const centerY = canvas.height / 2;
+                const radius = 280; // 圆的半径
+                
+                const img = new Image();
+                img.src = 'content/images/photo.jpg'; 
+                
+                // 加载失败的回退图片 (可选)
+                img.onerror = function() {
+                    img.src = 'https://placehold.co/600x600/EFEFEF/999?text=Photo';
+                };
+
+                img.onload = function() {
+                    ctx.save();
+                    ctx.beginPath();
+                    // 绘制圆形
+                    ctx.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
+                    ctx.closePath();
+                    ctx.clip(); // 裁剪区域
+
+                    // 绘制图片
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    ctx.restore();
+                };
+            }
+        };
+    </script>
 </body>
 </html>
