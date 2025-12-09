@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weiyang Jin's Homepage</title>
+    <title>Weiyang Jin | HKU</title>
     
-    <!-- 引入 Google Fonts 提升排版质感 -->
+    <!-- 引入 Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
@@ -20,11 +20,12 @@
             --bg-color: #ffffff;
             --secondary-text: #666666;
             --link-hover: #b32424;
+            --light-bg: #f9f9f9;
         }
 
         body {
             background-color: var(--bg-color);
-            font-family: 'Lato', sans-serif; /* 正文使用无衬线字体 */
+            font-family: 'Lato', sans-serif;
             font-size: 16px;
             line-height: 1.7;
             color: var(--text-color);
@@ -33,7 +34,7 @@
         }
 
         h1, h2, h3 {
-            font-family: 'Merriweather', serif; /* 标题使用衬线字体 */
+            font-family: 'Merriweather', serif;
             font-weight: 700;
         }
 
@@ -49,7 +50,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -57,12 +58,12 @@
         /* --- Header Section (Profile & Bio) --- */
         .profile-header {
             display: flex;
-            align-items: center;
+            align-items: center; /* 垂直居中 */
             justify-content: space-between;
-            gap: 40px;
+            gap: 50px;
             margin-bottom: 60px;
             border-bottom: 1px solid #eee;
-            padding-bottom: 40px;
+            padding-bottom: 50px;
         }
 
         .bio-text {
@@ -70,76 +71,104 @@
         }
 
         .bio-text h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 10px;
             margin-top: 0;
             letter-spacing: -0.5px;
+            color: #222;
         }
 
-        .bio-text p {
+        .role-title {
             font-size: 1.1rem;
             margin-bottom: 15px;
+            line-height: 1.6;
         }
 
+        .contact-info {
+            font-size: 1rem;
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* 社交按钮样式优化 */
         .social-links {
-            margin-top: 20px;
+            margin-top: 25px;
             display: flex;
-            gap: 15px;
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
         .social-links a {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            background: #f4f4f4;
-            padding: 8px 12px;
-            border-radius: 6px;
+            gap: 8px;
+            background: #f0f2f5;
+            padding: 8px 16px;
+            border-radius: 50px; /* 圆角胶囊样式 */
             font-size: 0.9rem;
             color: #444;
             text-decoration: none;
-            transition: all 0.2s;
+            transition: all 0.2s ease;
+            font-weight: 600;
+            border: 1px solid transparent;
         }
 
         .social-links a:hover {
-            background: #e0e0e0;
-            color: #000;
+            background: #fff;
+            border-color: #ddd;
+            color: var(--primary-color);
             transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .highlight-box {
             background-color: #f0f7ff;
             border-left: 4px solid var(--primary-color);
-            padding: 10px 15px;
-            margin-top: 20px;
+            padding: 12px 16px;
+            margin-top: 25px;
             border-radius: 0 4px 4px 0;
             font-size: 0.95rem;
             color: #000;
         }
 
-        /* --- Canvas Wrapper --- */
-        .canvas-container {
+        /* --- Profile Image (CSS Implementation) --- */
+        .profile-image-container {
             flex-shrink: 0;
-            width: 380px;
-            height: 380px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 300px;
+            height: 300px;
+            position: relative;
         }
 
-        canvas {
+        /* CSS直接切圆角，不需要Canvas */
+        .profile-photo {
             width: 100%;
-            height: auto;
-            max-width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保证图片不变形 */
+            border-radius: 50%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border: 4px solid #fff;
         }
 
         /* --- Section Styling --- */
         .section-title {
-            color: var(--accent-color);
+            color: var(--text-color);
             border-bottom: 2px solid #eee;
             padding-bottom: 10px;
-            margin-top: 50px;
-            margin-bottom: 25px;
-            font-size: 1.5rem;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-size: 1.75rem;
+            position: relative;
+        }
+        
+        /* 标题下的小红条 */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--accent-color);
         }
 
         ul {
@@ -154,45 +183,55 @@
         .publication {
             display: flex;
             gap: 25px;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
             align-items: flex-start;
         }
 
         .publogo {
-            width: 200px;
+            width: 180px;
             height: auto;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             flex-shrink: 0;
             object-fit: cover;
             border: 1px solid #eee;
+            transition: transform 0.2s;
+        }
+        
+        .publication:hover .publogo {
+            transform: scale(1.02);
         }
 
         .pub-content strong a {
             font-size: 1.15rem;
             color: #1a1a1a;
             font-family: 'Merriweather', serif;
+            display: block;
+            margin-bottom: 6px;
+            line-height: 1.4;
         }
 
         .pub-content .authors {
             color: #555;
-            margin: 6px 0;
-            font-size: 0.95rem;
+            margin: 8px 0;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .pub-content .links {
-            margin-top: 8px;
+            margin-top: 12px;
         }
 
         .pub-content .links a {
             display: inline-block;
-            margin-right: 12px;
-            font-size: 0.9rem;
+            margin-right: 15px;
+            font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* --- Experience & List Items --- */
+        /* --- Experience & Lists --- */
         .experience-list {
             list-style: none;
             padding: 0;
@@ -201,15 +240,20 @@
         .experience-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border-bottom: 1px dashed #eee;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
         }
 
         .exp-details strong {
             display: block;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #222;
+            margin-bottom: 4px;
         }
         
         .exp-details span {
@@ -218,17 +262,32 @@
 
         .exp-date {
             text-align: right;
-            min-width: 120px;
+            min-width: 140px;
             color: #777;
-            font-style: italic;
+            font-feature-settings: "tnum"; /* 表格数字对齐 */
             font-size: 0.95rem;
+        }
+
+        /* --- News Tag --- */
+        .news-date {
+            font-family: monospace; 
+            background: #eef4fa; 
+            color: var(--primary-color);
+            padding: 2px 8px; 
+            border-radius: 4px;
+            margin-right: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
 
         /* --- Footer --- */
         .visitor-map {
-            margin-top: 60px;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
             text-align: center;
             opacity: 0.8;
+            margin-bottom: 40px;
         }
 
         /* --- Responsive Design --- */
@@ -236,21 +295,20 @@
             .profile-header {
                 flex-direction: column-reverse;
                 text-align: center;
-                gap: 20px;
+                gap: 30px;
             }
 
             .bio-text h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
-
+            
             .social-links {
                 justify-content: center;
-                flex-wrap: wrap;
             }
 
-            .canvas-container {
-                width: 280px;
-                height: 280px;
+            .profile-image-container {
+                width: 220px;
+                height: 220px;
             }
 
             .publication {
@@ -261,16 +319,19 @@
 
             .publogo {
                 width: 100%;
-                max-width: 300px;
+                max-width: 320px;
+                margin-bottom: 15px;
             }
             
             .experience-item {
                 flex-direction: column;
+                align-items: flex-start;
             }
             
             .exp-date {
                 text-align: left;
-                margin-top: 4px;
+                margin-top: 5px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -283,29 +344,36 @@
         <header class="profile-header">
             <div class="bio-text">
                 <h1>WEIYANG JIN</h1>
-                <p>
+                <div class="role-title">
                     <b>PhD Student of IDS (MMLab)</b><br>
                     University of Hong Kong<br>
-                    <span style="color: #666;">Hong Kong, P.R.China</span>
-                </p>
-                <p>
-                    Email: <a href="mailto:wayneyjin@gmail.com">wayneyjin [at] gmail [dot] com</a>
-                </p>
+                    <!-- 修改后的地址 -->
+                    <span style="color: #666;">Hong Kong SAR, China</span>
+                </div>
+                
+                <div class="contact-info">
+                    Email: <a href="mailto:wayneyjin@gmail.com">wayneyjin@gmail.com</a>
+                </div>
                 
                 <div class="social-links">
                     <a href="https://github.com/WayneJin0918/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://x.com/JinWeiyang18434" target="_blank"><i class="fab fa-twitter"></i> Twitter/X</a>
-                    <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
                 </div>
 
                 <div class="highlight-box">
                     <i class="fas fa-bullhorn" style="margin-right: 8px;"></i> 
-                    <strong>I'm looking for industrial internship opportunities about UMMs!!!</strong>
+                    <strong>I'm looking for industrial internship opportunities regarding UMMs!</strong>
                 </div>
             </div>
 
-            <div class="canvas-container">
-                <canvas id="profileCanvas" width="600" height="600"></canvas>
+            <div class="profile-image-container">
+                <!-- 直接使用 img 标签 + CSS 圆角，替代复杂的 Canvas -->
+                <!-- 使用 onerror 提供占位符，防止图片路径错误时显示裂图 -->
+                <img src="content/images/photo.jpg" 
+                     alt="Weiyang Jin" 
+                     class="profile-photo"
+                     onerror="this.src='https://placehold.co/600x600/e0e0e0/555?text=Photo'">
             </div>
         </header>
 
@@ -318,19 +386,19 @@
         <!-- News -->
         <section>
             <h2 id="news" class="section-title">News</h2>
-            <ul>
-                <li><span style="font-family: monospace; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">2025/10</span> Will join in <a href="https://mmlab.hk/">HKU-MMLab</a> and start my PhD career.</li>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><span class="news-date">2025/10</span> Will join <a href="https://mmlab.hk/">HKU-MMLab</a> and start my PhD career.</li>
             </ul>
         </section>
 
         <!-- Publications -->
         <section>
             <h2 id="publications" class="section-title">Selected Projects</h2>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 20px;">(*: Equal Contribution, †: Project Leader)</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 25px;">(*: Equal Contribution, †: Project Leader)</p>
 
             <!-- Pub 1 -->
             <div class="publication">
-                <img src="content/images/unisandbox.png" class="publogo" alt="UniSandBox Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <img src="content/images/unisandbox.png" class="publogo" alt="UniSandBox Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=UniSandBox'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a></strong>
                     <div class="authors">
@@ -345,7 +413,7 @@
 
             <!-- Pub 2 -->
             <div class="publication">
-                <img src="content/images/srum_teaser.png" class="publogo" alt="SRUM Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <img src="content/images/srum_teaser.png" class="publogo" alt="SRUM Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=SRUM'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a></strong>
                     <div class="authors">
@@ -360,7 +428,7 @@
 
             <!-- Pub 3 -->
             <div class="publication">
-                <img src="content/images/semi_teaser.png" class="publogo" alt="SemiReward Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <img src="content/images/semi_teaser.png" class="publogo" alt="SemiReward Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=SemiReward'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2310.03013">SemiReward: A General Reward Model for Semi-supervised Learning</a></strong>
                     <div class="authors">
@@ -374,8 +442,8 @@
             </div>
             
             <!-- Pub 4 -->
-             <div class="publication">
-                <img src="content/images/wise_teaser.png" class="publogo" alt="WISE Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+            <div class="publication">
+                <img src="content/images/wise_teaser.png" class="publogo" alt="WISE Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=WISE'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a></strong>
                     <div class="authors">
@@ -390,7 +458,7 @@
 
             <!-- Pub 5 -->
             <div class="publication">
-                <img src="content/images/intern_m1_teaser.png" class="publogo" alt="InternVLA Teaser" onerror="this.src='https://placehold.co/400x300/e0e0e0/888?text=Image+Not+Found'">
+                <img src="content/images/intern_m1_teaser.png" class="publogo" alt="InternVLA Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=InternVLA-M1'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a></strong>
                     <div class="authors">
@@ -463,40 +531,5 @@
         </div>
 
     </div>
-
-    <script>
-        window.onload = function() {
-            const canvas = document.getElementById('profileCanvas');
-            if (canvas && canvas.getContext) {
-                const ctx = canvas.getContext('2d');
-                
-                // 设置画布尺寸和中心
-                const centerX = canvas.width / 2;
-                const centerY = canvas.height / 2;
-                const radius = 280; // 圆的半径
-                
-                const img = new Image();
-                img.src = 'content/images/photo.jpg'; 
-                
-                // 加载失败的回退图片 (可选)
-                img.onerror = function() {
-                    img.src = 'https://placehold.co/600x600/EFEFEF/999?text=Photo';
-                };
-
-                img.onload = function() {
-                    ctx.save();
-                    ctx.beginPath();
-                    // 绘制圆形
-                    ctx.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
-                    ctx.closePath();
-                    ctx.clip(); // 裁剪区域
-
-                    // 绘制图片
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    ctx.restore();
-                };
-            }
-        };
-    </script>
 </body>
 </html>
