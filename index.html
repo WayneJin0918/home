@@ -506,7 +506,7 @@
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/pdf/2512.16922"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/SihanXU/nepa"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="SihanXU/nepa"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/SihanXU/nepa"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="SihanXU/nepa"><i class="fas fa-star"></i> 333</span></a>
                     </div>
                 </div>
             </div>
@@ -528,7 +528,7 @@
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2510.12784"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/WayneJin0918/SRUM"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="WayneJin0918/SRUM"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/WayneJin0918/SRUM"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="WayneJin0918/SRUM"><i class="fas fa-star"></i> 92</span></a>
                     </div>
                 </div>
             </div>
@@ -542,7 +542,7 @@
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2511.20561"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/PKU-YuanGroup/UniSandBox"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="PKU-YuanGroup/UniSandBox"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/PKU-YuanGroup/UniSandBox"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="PKU-YuanGroup/UniSandBox"><i class="fas fa-star"></i> 60</span></a>
                     </div>
                 </div>
             </div>
@@ -556,7 +556,7 @@
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2503.07265"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/PKU-YuanGroup/WISE"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="PKU-YuanGroup/WISE"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/PKU-YuanGroup/WISE"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="PKU-YuanGroup/WISE"><i class="fas fa-star"></i> 205</span></a>
                     </div>
                 </div>
             </div>
@@ -578,7 +578,7 @@
                     </div>
                     <div class="links">
                         <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> 824</span></a>
                     </div>
                 </div>
             </div>
@@ -592,7 +592,7 @@
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2605.04128"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> 2,160</span></a>
                     </div>
                 </div>
             </div>
@@ -606,7 +606,7 @@
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2510.13778"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/InternRobotics/InternVLA-M1"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="InternRobotics/InternVLA-M1"><i class="fas fa-star"></i> —</span></a>
+                        <a href="https://github.com/InternRobotics/InternVLA-M1"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="InternRobotics/InternVLA-M1"><i class="fas fa-star"></i> 416</span></a>
                     </div>
                 </div>
             </div>
@@ -686,17 +686,51 @@
     </div>
 
     <script>
-        document.querySelectorAll('.github-stars[data-repo]').forEach(function (el) {
-            var repo = el.getAttribute('data-repo');
-            fetch('https://api.github.com/repos/' + repo)
-                .then(function (res) { return res.ok ? res.json() : null; })
-                .then(function (data) {
-                    if (data && typeof data.stargazers_count === 'number') {
-                        el.innerHTML = '<i class="fas fa-star"></i> ' + data.stargazers_count.toLocaleString();
+        (function () {
+            var cacheKey = 'github-stars-v1';
+            var cacheTtl = 24 * 60 * 60 * 1000;
+            var starEls = Array.prototype.slice.call(document.querySelectorAll('.github-stars[data-repo]'));
+
+            function renderStars(stars) {
+                starEls.forEach(function (el) {
+                    var repo = el.getAttribute('data-repo');
+                    if (typeof stars[repo] === 'number') {
+                        el.innerHTML = '<i class="fas fa-star"></i> ' + stars[repo].toLocaleString();
                     }
-                })
-                .catch(function () {});
-        });
+                });
+            }
+
+            try {
+                var cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+                if (cached && Date.now() - cached.updatedAt < cacheTtl && cached.stars) {
+                    renderStars(cached.stars);
+                    return;
+                }
+            } catch (err) {}
+
+            Promise.all(starEls.map(function (el) {
+                var repo = el.getAttribute('data-repo');
+                return fetch('https://api.github.com/repos/' + repo)
+                    .then(function (res) { return res.ok ? res.json() : null; })
+                    .then(function (data) {
+                        return data && typeof data.stargazers_count === 'number'
+                            ? [repo, data.stargazers_count]
+                            : null;
+                    })
+                    .catch(function () { return null; });
+            })).then(function (results) {
+                var stars = {};
+                results.forEach(function (entry) {
+                    if (entry) {
+                        stars[entry[0]] = entry[1];
+                    }
+                });
+                if (Object.keys(stars).length) {
+                    renderStars(stars);
+                    localStorage.setItem(cacheKey, JSON.stringify({ updatedAt: Date.now(), stars: stars }));
+                }
+            }).catch(function () {});
+        })();
     </script>
 </body>
 </html>
