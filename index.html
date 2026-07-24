@@ -312,6 +312,12 @@
             border: 1px solid #eee;
             transition: transform 0.2s;
         }
+
+        .publogo-contain {
+            height: 120px;
+            object-fit: contain;
+            background: #fff;
+        }
         
         .publication:hover .publogo {
             transform: scale(1.02);
@@ -536,11 +542,11 @@
 
             <!-- ===== World Model ===== -->
             <details class="category" open>
-            <summary class="category-title"><i class="fas fa-globe cat-icon"></i> World Model <span class="category-count">2</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <summary class="category-title"><i class="fas fa-globe cat-icon"></i> World Model <span class="category-count">1</span><i class="fas fa-chevron-right chevron"></i></summary>
             <div class="category-body">
 
             <div class="publication">
-                <img src="content/images/echo_infinity.png" class="publogo" alt="Echo-Infinity Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Infinity'">
+                <img src="content/images/echo_infinity_official.png" class="publogo publogo-contain" alt="Echo-Infinity Method" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Infinity'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2606.04527">Echo-Infinity: Learning Evolving Memory for Real-Time Infinite Video Generation</a> <span class="venue-badge submitted">Under Review</span></strong>
                     <div class="authors">
@@ -554,26 +560,12 @@
                 </div>
             </div>
 
-            <div class="publication">
-                <img src="content/images/joyecho.png" class="publogo" alt="JoyAI-Echo Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Echo'">
-                <div class="pub-content">
-                    <strong><a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
-                    <div class="authors">
-                        Echo Team
-                    </div>
-                    <div class="links">
-                        <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> 1,828</span></a>
-                    </div>
-                </div>
-            </div>
-
             </div>
             </details>
 
             <!-- ===== Generative Models ===== -->
             <details class="category" open>
-            <summary class="category-title"><i class="fas fa-palette cat-icon"></i> Generative Models <span class="category-count">5</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <summary class="category-title"><i class="fas fa-palette cat-icon"></i> Generative Models <span class="category-count">4</span><i class="fas fa-chevron-right chevron"></i></summary>
             <div class="category-body">
 
             <div class="publication">
@@ -632,19 +624,6 @@
                 </div>
             </div>
 
-            <div class="publication">
-                <img src="content/images/joyimage.png" class="publogo" alt="JoyAI-Image Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Image'">
-                <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2605.04128">JoyAI-Image: Awakening Spatial Intelligence in Unified Multimodal Understanding and Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
-                    <div class="authors">
-                        Joy Team / JD Future Team
-                    </div>
-                    <div class="links">
-                        <a href="https://arxiv.org/abs/2605.04128"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> 2,239</span></a>
-                    </div>
-                </div>
-            </div>
 
             </div>
             </details>
@@ -673,7 +652,7 @@
 
             <!-- ===== Embodied AI ===== -->
             <details class="category" open>
-            <summary class="category-title"><i class="fas fa-robot cat-icon"></i> Embodied AI <span class="category-count">2</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <summary class="category-title"><i class="fas fa-robot cat-icon"></i> Embodied AI <span class="category-count">1</span><i class="fas fa-chevron-right chevron"></i></summary>
             <div class="category-body">
 
             <div class="publication">
@@ -690,16 +669,48 @@
                 </div>
             </div>
 
+
+            </div>
+            </details>
+
+            <!-- ===== Technical Reports ===== -->
+            <details class="category" open>
+            <summary class="category-title"><i class="fas fa-file-alt cat-icon"></i> Technical Reports <span class="category-count">3</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <div class="category-body">
+
             <div class="publication">
-                <img src="content/images/robodojo.png" class="publogo" alt="RoboDojo Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=RoboDojo'">
+                <img src="content/images/robodojo_official.png" class="publogo publogo-contain" alt="RoboDojo Benchmark" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=RoboDojo'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2607.04434">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a> <span class="venue-badge submitted">Under Review</span></strong>
-                    <div class="authors">
-                        Tianxing Chen*, Yue Chen*, Zixuan Li*, Junyuan Tang*, Kailun Su*, Haoran Lu*, Weijie Wan*, Baijun Chen*, Songling Liu*, ... , <strong>Weiyang Jin</strong>, ... , Ping Luo†, Masayoshi Tomizuka†
-                    </div>
+                    <strong><a href="https://arxiv.org/abs/2607.04434">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a> <span class="venue-badge techreport">Report</span></strong>
+                    <div class="authors">AI MMLab Club</div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2607.04434"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/QiangyuChen1/RoboDojo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="QiangyuChen1/RoboDojo"><i class="fas fa-star"></i> 13</span></a>
+                        <a href="https://robodojo-benchmark.com/" target="_blank"><i class="fas fa-globe"></i> Project</a>
+                        <a href="https://github.com/RoboDojo-Benchmark/RoboDojo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="RoboDojo-Benchmark/RoboDojo"><i class="fas fa-star"></i> 295</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="content/images/joyecho.png" class="publogo" alt="JoyAI-Echo Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Echo'">
+                <div class="pub-content">
+                    <strong><a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
+                    <div class="authors">Echo Team</div>
+                    <div class="links">
+                        <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> 1,828</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="content/images/joyimage.png" class="publogo" alt="JoyAI-Image Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Image'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2605.04128">JoyAI-Image: Awakening Spatial Intelligence in Unified Multimodal Understanding and Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
+                    <div class="authors">JD Future Team</div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2605.04128"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> 2,239</span></a>
                     </div>
                 </div>
             </div>
@@ -777,7 +788,7 @@
 
     <script>
         (function () {
-            var cacheKey = 'github-stars-v4';
+            var cacheKey = 'github-stars-v5';
             var cacheTtl = 24 * 60 * 60 * 1000;
             var starEls = Array.prototype.slice.call(document.querySelectorAll('.github-stars[data-repo]'));
 
