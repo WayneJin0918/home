@@ -333,6 +333,13 @@
             object-fit: contain;
             background: #fff;
         }
+
+        .publogo-world {
+            width: 200px;
+            height: 78px;
+            object-fit: cover;
+            object-position: center;
+        }
         
         .publication:hover .publogo {
             transform: scale(1.02);
@@ -349,7 +356,6 @@
             font-family: 'Merriweather', serif;
             display: flex;
             align-items: flex-start;
-            justify-content: space-between;
             gap: 12px;
             margin-bottom: 6px;
             line-height: 1.4;
@@ -365,7 +371,10 @@
         }
 
         .pub-content > strong .venue-badge {
-            flex-shrink: 0;
+            order: -1;
+            flex: 0 0 92px;
+            justify-content: center;
+            box-sizing: border-box;
             margin: 3px 0 0;
         }
 
@@ -530,6 +539,8 @@
             }
 
             .pub-content > strong .venue-badge {
+                flex: 0 0 auto;
+                width: 92px;
                 margin-top: 0;
             }
 
@@ -537,6 +548,12 @@
                 width: 100%;
                 max-width: 320px;
                 margin-bottom: 15px;
+            }
+
+            .publogo-world {
+                height: auto;
+                aspect-ratio: 2.55 / 1;
+                object-fit: cover;
             }
             
             .experience-item {
@@ -621,7 +638,7 @@
             <div class="category-body">
 
             <div class="publication">
-                <img src="content/images/echo_memory_official.png" class="publogo publogo-contain" alt="Echo-Memory Framework" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Memory'">
+                <img src="content/images/echo_memory_official.png" class="publogo publogo-world" alt="Echo-Memory Framework" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Memory'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2606.09803">Echo-Memory: A Controlled Study of Memory in Action World Models</a> <span class="venue-badge submitted">Under Review</span></strong>
                     <div class="authors">
@@ -636,7 +653,7 @@
             </div>
 
             <div class="publication">
-                <img src="content/images/echo_infinity_official.png" class="publogo publogo-contain" alt="Echo-Infinity Method" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Infinity'">
+                <img src="content/images/echo_infinity_official.png" class="publogo publogo-world" alt="Echo-Infinity Method" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Infinity'">
                 <div class="pub-content">
                     <strong><a href="https://arxiv.org/abs/2606.04527">Echo-Infinity: Learning Evolving Memory for Real-Time Infinite Video Generation</a> <span class="venue-badge submitted">Under Review</span></strong>
                     <div class="authors">
