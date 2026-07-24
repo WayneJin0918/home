@@ -338,20 +338,35 @@
             transform: scale(1.02);
         }
 
+        .pub-content {
+            flex: 1;
+            min-width: 0;
+        }
+
         .pub-content > strong {
             font-size: 1.15rem;
             color: #1a1a1a;
             font-family: 'Merriweather', serif;
-            display: block;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
             margin-bottom: 6px;
             line-height: 1.4;
         }
 
         .pub-content > strong a {
+            flex: 1;
+            min-width: 0;
             font-size: inherit;
             color: inherit;
             font-family: inherit;
-            display: inline;
+            display: block;
+        }
+
+        .pub-content > strong .venue-badge {
+            flex-shrink: 0;
+            margin: 3px 0 0;
         }
 
         .pub-content .authors strong {
@@ -502,6 +517,20 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+            }
+
+            .pub-content {
+                width: 100%;
+            }
+
+            .pub-content > strong {
+                flex-direction: column;
+                align-items: center;
+                gap: 7px;
+            }
+
+            .pub-content > strong .venue-badge {
+                margin-top: 0;
             }
 
             .publogo {
