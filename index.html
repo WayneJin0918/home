@@ -354,28 +354,20 @@
             font-size: 1.15rem;
             color: #1a1a1a;
             font-family: 'Merriweather', serif;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
+            display: block;
             margin-bottom: 6px;
             line-height: 1.4;
         }
 
         .pub-content > strong a {
-            flex: 1;
-            min-width: 0;
             font-size: inherit;
             color: inherit;
             font-family: inherit;
             display: block;
         }
 
-        .pub-content > strong .venue-badge {
-            order: -1;
-            flex: 0 0 92px;
-            justify-content: center;
-            box-sizing: border-box;
-            margin: 3px 0 0;
+        .pub-content .authors .venue-badge {
+            margin-left: 7px;
         }
 
         .pub-content .authors strong {
@@ -532,18 +524,6 @@
                 width: 100%;
             }
 
-            .pub-content > strong {
-                flex-direction: column;
-                align-items: center;
-                gap: 7px;
-            }
-
-            .pub-content > strong .venue-badge {
-                flex: 0 0 auto;
-                width: 92px;
-                margin-top: 0;
-            }
-
             .publogo {
                 width: 100%;
                 max-width: 320px;
@@ -640,9 +620,9 @@
             <div class="publication">
                 <img src="content/images/echo_memory_official.png" class="publogo publogo-world" alt="Echo-Memory Framework" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Memory'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2606.09803">Echo-Memory: A Controlled Study of Memory in Action World Models</a> <span class="venue-badge submitted">Under Review</span></strong>
+                    <strong><a href="https://arxiv.org/abs/2606.09803">Echo-Memory: A Controlled Study of Memory in Action World Models</a></strong>
                     <div class="authors">
-                        <strong>Wayne King†</strong>, Zeyue Xue, Yuxuan Bian, Jie Huang, Haoran Li, Yaowei Li, Yaofeng Su, Yuming Li, Haoyu Wang, Shiyi Zhang, Songchun Zhang, Yuwei Niu, Sihan Xu, Junhao Zhuang, Haoyang Huang, Nan Duan†
+                        <strong>Wayne King†</strong>, Zeyue Xue, Yuxuan Bian, Jie Huang, Haoran Li, Yaowei Li, Yaofeng Su, Yuming Li, Haoyu Wang, Shiyi Zhang, Songchun Zhang, Yuwei Niu, Sihan Xu, Junhao Zhuang, Haoyang Huang, Nan Duan† <span class="venue-badge submitted">Under Review</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2606.09803"><i class="far fa-file-pdf"></i> Paper</a>
@@ -655,9 +635,9 @@
             <div class="publication">
                 <img src="content/images/echo_infinity_official.png" class="publogo publogo-world" alt="Echo-Infinity Method" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=Echo-Infinity'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2606.04527">Echo-Infinity: Learning Evolving Memory for Real-Time Infinite Video Generation</a> <span class="venue-badge submitted">Under Review</span></strong>
+                    <strong><a href="https://arxiv.org/abs/2606.04527">Echo-Infinity: Learning Evolving Memory for Real-Time Infinite Video Generation</a></strong>
                     <div class="authors">
-                        Yuxuan Bian, Zeyue Xue, Songchun Zhang, Shiyi Zhang, <strong>Weiyang Jin</strong>, Yaowei Li, Junhao Zhuang, Haoran Li, Jie Huang, Haoyang Huang, Nan Duan†, Qiang Xu†
+                        Yuxuan Bian, Zeyue Xue, Songchun Zhang, Shiyi Zhang, <strong>Weiyang Jin</strong>, Yaowei Li, Junhao Zhuang, Haoran Li, Jie Huang, Haoyang Huang, Nan Duan†, Qiang Xu† <span class="venue-badge submitted">Under Review</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2606.04527"><i class="far fa-file-pdf"></i> Paper</a>
@@ -678,9 +658,9 @@
             <div class="publication">
                 <img src="content/images/universe.png" class="publogo" alt="UniVerse Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=UniVerse'">
                 <div class="pub-content">
-                    <strong><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Sun_UniVerse_Empower_Unified_Generation_with_Reasoning_and_Knowledge_CVPR_2026_paper.html">UniVerse: Empower Unified Generation with Reasoning and Knowledge</a> <span class="venue-badge accepted">CVPR 2026</span></strong>
+                    <strong><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Sun_UniVerse_Empower_Unified_Generation_with_Reasoning_and_Knowledge_CVPR_2026_paper.html">UniVerse: Empower Unified Generation with Reasoning and Knowledge</a></strong>
                     <div class="authors">
-                        Kaiyue Sun*, <strong>Weiyang Jin*</strong>, Chengqi Duan, Rongyao Fang, Xian Liu, Yuwei Niu, Chunwei Wang, Aoxue Li, Xihui Liu
+                        Kaiyue Sun*, <strong>Weiyang Jin*</strong>, Chengqi Duan, Rongyao Fang, Xian Liu, Yuwei Niu, Chunwei Wang, Aoxue Li, Xihui Liu <span class="venue-badge accepted">CVPR 2026</span>
                     </div>
                     <div class="links">
                         <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_UniVerse_Empower_Unified_Generation_with_Reasoning_and_Knowledge_CVPR_2026_paper.pdf"><i class="far fa-file-pdf"></i> Paper</a>
@@ -692,9 +672,9 @@
             <div class="publication">
                 <img src="content/images/wise_teaser.png" class="publogo" alt="WISE Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=WISE'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a> <span class="venue-badge accepted">ICML 2026</span></strong>
+                    <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a></strong>
                     <div class="authors">
-                        Yuwei Niu*, Munan Ning*, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
+                        Yuwei Niu*, Munan Ning*, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan <span class="venue-badge accepted">ICML 2026</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2503.07265"><i class="far fa-file-pdf"></i> Paper</a>
@@ -706,9 +686,9 @@
             <div class="publication">
                 <img src="content/images/srum_teaser.png" class="publogo" alt="SRUM Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=SRUM'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a> <span class="venue-badge accepted">ECCV 2026</span></strong>
+                    <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a></strong>
                     <div class="authors">
-                        <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu
+                        <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu <span class="venue-badge accepted">ECCV 2026</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2510.12784"><i class="far fa-file-pdf"></i> Paper</a>
@@ -720,9 +700,9 @@
             <div class="publication">
                 <img src="content/images/unisandbox.png" class="publogo" alt="UniSandBox Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=UniSandBox'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a> <span class="venue-badge submitted">Under Review</span></strong>
+                    <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a></strong>
                     <div class="authors">
-                        Yuwei Niu*, <strong>Weiyang Jin*</strong>, Jiaqi Liao, Chaoran Feng, Peng Jin, Bin Lin, Zongjian Li, Bin Zhu, Weihao Yu, Li Yuan
+                        Yuwei Niu*, <strong>Weiyang Jin*</strong>, Jiaqi Liao, Chaoran Feng, Peng Jin, Bin Lin, Zongjian Li, Bin Zhu, Weihao Yu, Li Yuan <span class="venue-badge submitted">Under Review</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2511.20561"><i class="far fa-file-pdf"></i> Paper</a>
@@ -743,9 +723,9 @@
             <div class="publication">
                 <img src="content/images/nepa.png" class="publogo" alt="NEPA Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=NEPA'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/pdf/2512.16922">Next-Embedding Predictive Architectures Are Strong Vision Learners</a> <span class="venue-badge submitted">Under Review</span></strong>
+                    <strong><a href="https://arxiv.org/pdf/2512.16922">Next-Embedding Predictive Architectures Are Strong Vision Learners</a></strong>
                     <div class="authors">
-                        Sihan Xu, Ziqiao Ma, Wenhao Chai, Xuweiyi Chen, <strong>Weiyang Jin</strong>, Joyce Chai, Saining Xie, Stella X. Yu
+                        Sihan Xu, Ziqiao Ma, Wenhao Chai, Xuweiyi Chen, <strong>Weiyang Jin</strong>, Joyce Chai, Saining Xie, Stella X. Yu <span class="venue-badge submitted">Under Review</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/pdf/2512.16922"><i class="far fa-file-pdf"></i> Paper</a>
@@ -765,9 +745,9 @@
             <div class="publication">
                 <img src="content/images/intern_m1_teaser.png" class="publogo" alt="InternVLA Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=InternVLA-M1'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a> <span class="venue-badge accepted">ICLR 2026</span></strong>
+                    <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a></strong>
                     <div class="authors">
-                        Intern Robotics Team
+                        Intern Robotics Team <span class="venue-badge accepted">ICLR 2026</span>
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2510.13778"><i class="far fa-file-pdf"></i> Paper</a>
@@ -788,8 +768,8 @@
             <div class="publication">
                 <img src="content/images/robodojo_official.png" class="publogo publogo-contain" alt="RoboDojo Benchmark" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=RoboDojo'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2607.04434">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a> <span class="venue-badge techreport">Tech Report</span></strong>
-                    <div class="authors">AI MMLab Club</div>
+                    <strong><a href="https://arxiv.org/abs/2607.04434">RoboDojo: A Unified Sim-and-Real Benchmark for Comprehensive Evaluation of Generalist Robot Manipulation Policies</a></strong>
+                    <div class="authors">AI MMLab Club <span class="venue-badge techreport">Tech Report</span></div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2607.04434"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://robodojo-benchmark.com/" target="_blank"><i class="fas fa-globe"></i> Project</a>
@@ -801,8 +781,8 @@
             <div class="publication">
                 <img src="content/images/joyecho.png" class="publogo" alt="JoyAI-Echo Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Echo'">
                 <div class="pub-content">
-                    <strong><a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
-                    <div class="authors">Echo Team</div>
+                    <strong><a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a></strong>
+                    <div class="authors">Echo Team <span class="venue-badge techreport">Tech Report</span></div>
                     <div class="links">
                         <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> 1,828</span></a>
@@ -813,8 +793,8 @@
             <div class="publication">
                 <img src="content/images/joyimage.png" class="publogo" alt="JoyAI-Image Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Image'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2605.04128">JoyAI-Image: Awakening Spatial Intelligence in Unified Multimodal Understanding and Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
-                    <div class="authors">JD Future Team</div>
+                    <strong><a href="https://arxiv.org/abs/2605.04128">JoyAI-Image: Awakening Spatial Intelligence in Unified Multimodal Understanding and Generation</a></strong>
+                    <div class="authors">JD Future Team <span class="venue-badge techreport">Tech Report</span></div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2605.04128"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> 2,239</span></a>
