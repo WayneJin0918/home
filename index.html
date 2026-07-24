@@ -338,7 +338,7 @@
             transform: scale(1.02);
         }
 
-        .pub-content strong {
+        .pub-content > strong {
             font-size: 1.15rem;
             color: #1a1a1a;
             font-family: 'Merriweather', serif;
@@ -347,11 +347,19 @@
             line-height: 1.4;
         }
 
-        .pub-content strong a {
+        .pub-content > strong a {
             font-size: inherit;
             color: inherit;
             font-family: inherit;
             display: inline;
+        }
+
+        .pub-content .authors strong {
+            display: inline;
+            font: inherit;
+            font-weight: 700;
+            color: inherit;
+            margin: 0;
         }
 
         .pub-content .authors {
