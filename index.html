@@ -254,6 +254,36 @@
             margin-left: 6px;
         }
 
+        .venue-badge {
+            display: inline-block;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 8px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+
+        .venue-badge.accepted {
+            background: #d82644;
+            color: #fff;
+        }
+
+        .venue-badge.techreport {
+            background: #eef4fa;
+            color: var(--primary-color);
+            border: 1px solid #c5d8ef;
+        }
+
+        .venue-badge.submitted {
+            background: #f5f5f5;
+            color: #777;
+            border: 1px solid #ddd;
+        }
+
         .tbd-placeholder {
             color: #888;
             font-style: italic;
@@ -287,13 +317,20 @@
             transform: scale(1.02);
         }
 
-        .pub-content strong a {
+        .pub-content strong {
             font-size: 1.15rem;
             color: #1a1a1a;
             font-family: 'Merriweather', serif;
             display: block;
             margin-bottom: 6px;
             line-height: 1.4;
+        }
+
+        .pub-content strong a {
+            font-size: inherit;
+            color: inherit;
+            font-family: inherit;
+            display: inline;
         }
 
         .pub-content .authors {
@@ -483,6 +520,10 @@
         <section>
             <h2 id="news" class="section-title">News</h2>
             <ul style="list-style: none; padding-left: 0;">
+                <li><span class="news-date">2026/02</span> <strong>UniVerse</strong> accepted to <strong>CVPR 2026</strong>.</li>
+                <li><span class="news-date">2026/01</span> <strong>WISE</strong> accepted to <strong>ICML 2026</strong>.</li>
+                <li><span class="news-date">2026/01</span> <strong>InternVLA-M1</strong> accepted to <strong>ICLR 2026</strong>.</li>
+                <li><span class="news-date">2025/11</span> Joined <strong>Echo Team @ Joy Future Academy</strong> as a research intern.</li>
                 <li><span class="news-date">2025/10</span> Will join <a href="https://mmlab.hk/">HKU-MMLab</a> and start my PhD career.</li>
             </ul>
         </section>
@@ -490,23 +531,23 @@
         <!-- Publications -->
         <section>
             <h2 id="publications" class="section-title">Selected Projects</h2>
-            <p style="font-size: 0.9rem; color: #666; margin-bottom: 25px;">(*: Equal Contribution, †: Project Leader)</p>
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 25px;">(*: Equal Contribution, †: Project Leader) &nbsp;|&nbsp; <span class="venue-badge accepted">Venue</span> = Accepted</p>
 
-            <!-- ===== Foundation Models ===== -->
+            <!-- ===== World Model ===== -->
             <details class="category" open>
-            <summary class="category-title"><i class="fas fa-cubes cat-icon"></i> Foundation Models <span class="category-count">1</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <summary class="category-title"><i class="fas fa-globe cat-icon"></i> World Model <span class="category-count">1</span><i class="fas fa-chevron-right chevron"></i></summary>
             <div class="category-body">
 
             <div class="publication">
-                <img src="content/images/nepa.png" class="publogo" alt="NEPA Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=NEPA'">
+                <img src="content/images/joyecho.png" class="publogo" alt="JoyAI-Echo Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Echo'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/pdf/2512.16922">Next-Embedding Prediction Makes Strong Vision Learners</a></strong>
+                    <strong><a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
                     <div class="authors">
-                        Sihan Xu, Ziqiao Ma, Wenhao Chai, Xuweiyi Chen, <strong>Weiyang Jin</strong>, Joyce Chai, Saining Xie, Stella X. Yu
+                        Echo Team
                     </div>
                     <div class="links">
-                        <a href="https://arxiv.org/pdf/2512.16922"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/SihanXU/nepa"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="SihanXU/nepa"><i class="fas fa-star"></i> 336</span></a>
+                        <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> 1,828</span></a>
                     </div>
                 </div>
             </div>
@@ -516,19 +557,47 @@
 
             <!-- ===== Generative Models ===== -->
             <details class="category" open>
-            <summary class="category-title"><i class="fas fa-palette cat-icon"></i> Generative Models <span class="category-count">3</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <summary class="category-title"><i class="fas fa-palette cat-icon"></i> Generative Models <span class="category-count">5</span><i class="fas fa-chevron-right chevron"></i></summary>
             <div class="category-body">
+
+            <div class="publication">
+                <img src="content/images/universe.png" class="publogo" alt="UniVerse Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=UniVerse'">
+                <div class="pub-content">
+                    <strong><a href="https://openaccess.thecvf.com/content/CVPR2026/html/Sun_UniVerse_Empower_Unified_Generation_with_Reasoning_and_Knowledge_CVPR_2026_paper.html">UniVerse: Empower Unified Generation with Reasoning and Knowledge</a> <span class="venue-badge accepted">CVPR 2026</span></strong>
+                    <div class="authors">
+                        Kaiyue Sun*, <strong>Weiyang Jin*</strong>, Chengqi Duan, Rongyao Fang, Xian Liu, Yuwei Niu, Chunwei Wang, Aoxue Li, Xihui Liu
+                    </div>
+                    <div class="links">
+                        <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Sun_UniVerse_Empower_Unified_Generation_with_Reasoning_and_Knowledge_CVPR_2026_paper.pdf"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/KaiyueSun98/UniVerse"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="KaiyueSun98/UniVerse"><i class="fas fa-star"></i> 4</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="publication">
+                <img src="content/images/wise_teaser.png" class="publogo" alt="WISE Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=WISE'">
+                <div class="pub-content">
+                    <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a> <span class="venue-badge accepted">ICML 2026</span></strong>
+                    <div class="authors">
+                        Yuwei Niu*, Munan Ning*, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
+                    </div>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2503.07265"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/PKU-YuanGroup/WISE"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="PKU-YuanGroup/WISE"><i class="fas fa-star"></i> 212</span></a>
+                    </div>
+                </div>
+            </div>
 
             <div class="publication">
                 <img src="content/images/srum_teaser.png" class="publogo" alt="SRUM Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=SRUM'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a></strong>
+                    <strong><a href="https://arxiv.org/abs/2510.12784">SRUM: Fine-Grained Self-Rewarding for Unified Multimodal Models</a> <span class="venue-badge submitted">Under Review</span></strong>
                     <div class="authors">
                         <strong>Weiyang Jin*</strong>, Yuwei Niu*, Jiaqi Liao, Chengqi Duan, Aoxue Li, Shenghua Gao, Xihui Liu
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2510.12784"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/WayneJin0918/SRUM"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="WayneJin0918/SRUM"><i class="fas fa-star"></i> 90</span></a>
+                        <a href="https://github.com/WayneJin0918/SRUM"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="WayneJin0918/SRUM"><i class="fas fa-star"></i> 93</span></a>
                     </div>
                 </div>
             </div>
@@ -536,7 +605,7 @@
             <div class="publication">
                 <img src="content/images/unisandbox.png" class="publogo" alt="UniSandBox Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=UniSandBox'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a></strong>
+                    <strong><a href="https://arxiv.org/abs/2511.20561">Does Understanding Inform Generation in Unified Multimodal Models? From Analysis to Path Forward</a> <span class="venue-badge submitted">Under Review</span></strong>
                     <div class="authors">
                         Yuwei Niu*, <strong>Weiyang Jin*</strong>, Jiaqi Liao, Chaoran Feng, Peng Jin, Bin Lin, Zongjian Li, Bin Zhu, Weihao Yu, Li Yuan
                     </div>
@@ -548,15 +617,15 @@
             </div>
 
             <div class="publication">
-                <img src="content/images/wise_teaser.png" class="publogo" alt="WISE Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=WISE'">
+                <img src="content/images/joyimage.png" class="publogo" alt="JoyAI-Image Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Image'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2503.07265">WISE: A World Knowledge-Informed Semantic Evaluation for Text-to-Image Generation</a></strong>
+                    <strong><a href="https://arxiv.org/abs/2605.04128">JoyAI-Image: Awakening Spatial Intelligence in Unified Multimodal Understanding and Generation</a> <span class="venue-badge techreport">Tech Report</span></strong>
                     <div class="authors">
-                        Yuwei Niu, Munan Ning, Mengren Zheng, <strong>Weiyang Jin†</strong>, Bin Lin, Peng Jin, Jiaqi Liao, Chaoran Feng, Kunpeng Ning, Bin Zhu, Li Yuan
+                        Joy Team / JD Future Team
                     </div>
                     <div class="links">
-                        <a href="https://arxiv.org/abs/2503.07265"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/PKU-YuanGroup/WISE"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="PKU-YuanGroup/WISE"><i class="fas fa-star"></i> 206</span></a>
+                        <a href="https://arxiv.org/abs/2605.04128"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> 2,239</span></a>
                     </div>
                 </div>
             </div>
@@ -564,63 +633,47 @@
             </div>
             </details>
 
-            <!-- ===== Tech Report ===== -->
+            <!-- ===== Foundation Models ===== -->
             <details class="category" open>
-            <summary class="category-title"><i class="fas fa-file-alt cat-icon"></i> Tech Report <span class="category-count">3</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <summary class="category-title"><i class="fas fa-cubes cat-icon"></i> Foundation Models <span class="category-count">1</span><i class="fas fa-chevron-right chevron"></i></summary>
             <div class="category-body">
 
             <div class="publication">
-                <img src="content/images/joyecho.png" class="publogo" alt="JoyAI-Echo Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Echo'">
+                <img src="content/images/nepa.png" class="publogo" alt="NEPA Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=NEPA'">
                 <div class="pub-content">
-                    <strong><a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation">JoyAI-Echo: Pushing the Frontier of Long Audio-Visual Generation</a></strong>
+                    <strong><a href="https://arxiv.org/pdf/2512.16922">Next-Embedding Predictive Architectures Are Strong Vision Learners</a> <span class="venue-badge submitted">Under Review</span></strong>
                     <div class="authors">
-                        Echo Team
+                        Sihan Xu, Ziqiao Ma, Wenhao Chai, Xuweiyi Chen, <strong>Weiyang Jin</strong>, Joyce Chai, Saining Xie, Stella X. Yu
                     </div>
                     <div class="links">
-                        <a href="https://www.researchgate.net/publication/405770309_JoyAI-Echo_Pushing_the_Frontier_of_Long_Audio-Visual_Generation"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/jd-opensource/JoyAI-Echo"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Echo"><i class="fas fa-star"></i> 1,590</span></a>
+                        <a href="https://arxiv.org/pdf/2512.16922"><i class="far fa-file-pdf"></i> Paper</a>
+                        <a href="https://github.com/SihanXU/nepa"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="SihanXU/nepa"><i class="fas fa-star"></i> 338</span></a>
                     </div>
                 </div>
             </div>
 
-            <div class="publication">
-                <img src="content/images/joyimage.png" class="publogo" alt="JoyAI-Image Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=JoyAI-Image'">
-                <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2605.04128">JoyAI-Image: Awaking Spatial Intelligence in Unified Multimodal Understanding and Generation</a></strong>
-                    <div class="authors">
-                        JD Future Team
-                    </div>
-                    <div class="links">
-                        <a href="https://arxiv.org/abs/2605.04128"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/jd-opensource/JoyAI-Image"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="jd-opensource/JoyAI-Image"><i class="fas fa-star"></i> 2,177</span></a>
-                    </div>
-                </div>
             </div>
+            </details>
+
+            <!-- ===== Embodied AI ===== -->
+            <details class="category" open>
+            <summary class="category-title"><i class="fas fa-robot cat-icon"></i> Embodied AI <span class="category-count">1</span><i class="fas fa-chevron-right chevron"></i></summary>
+            <div class="category-body">
 
             <div class="publication">
                 <img src="content/images/intern_m1_teaser.png" class="publogo" alt="InternVLA Teaser" onerror="this.src='https://placehold.co/400x300/f0f2f5/888?text=InternVLA-M1'">
                 <div class="pub-content">
-                    <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a></strong>
+                    <strong><a href="https://arxiv.org/abs/2510.13778">InternVLA-M1: A Spatially Guided Vision-Language-Action Framework for Generalist Robot Policy</a> <span class="venue-badge accepted">ICLR 2026</span></strong>
                     <div class="authors">
                         Intern Robotics Team
                     </div>
                     <div class="links">
                         <a href="https://arxiv.org/abs/2510.13778"><i class="far fa-file-pdf"></i> Paper</a>
-                        <a href="https://github.com/InternRobotics/InternVLA-M1"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="InternRobotics/InternVLA-M1"><i class="fas fa-star"></i> 416</span></a>
+                        <a href="https://github.com/InternRobotics/InternVLA-M1"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="InternRobotics/InternVLA-M1"><i class="fas fa-star"></i> 418</span></a>
                     </div>
                 </div>
             </div>
 
-            </div>
-            </details>
-
-            <!-- ===== World Model ===== -->
-            <details class="category">
-            <summary class="category-title"><i class="fas fa-globe cat-icon"></i> World Model <span class="tbd-badge">TBD</span><i class="fas fa-chevron-right chevron"></i></summary>
-            <div class="category-body">
-                <div class="tbd-placeholder">
-                    Stay tuned — exciting work on world models is on the way.
-                </div>
             </div>
             </details>
         </section>
@@ -629,6 +682,13 @@
         <section>
             <h2 id="experience" class="section-title">Experience</h2>
             <ul class="experience-list">
+                <li class="experience-item">
+                    <div class="exp-details">
+                        <strong>Echo Team @ Joy Future Academy</strong>
+                        <span>Research Intern with Dr. Haoyang Huang</span>
+                    </div>
+                    <div class="exp-date">Nov 2025 - Present</div>
+                </li>
                 <li class="experience-item">
                     <div class="exp-details">
                         <strong>Shanghai Artificial Intelligence Laboratory, Intern Robotics</strong>
@@ -687,7 +747,7 @@
 
     <script>
         (function () {
-            var cacheKey = 'github-stars-v2';
+            var cacheKey = 'github-stars-v3';
             var cacheTtl = 24 * 60 * 60 * 1000;
             var starEls = Array.prototype.slice.call(document.querySelectorAll('.github-stars[data-repo]'));
 
