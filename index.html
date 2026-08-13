@@ -651,7 +651,7 @@
                     <div class="links">
                         <a href="https://arxiv.org/abs/2606.09803"><i class="far fa-file-pdf"></i> Paper</a>
                         <a href="https://echo-team-joy-future-academy-jd.github.io/Echo-Memory/" target="_blank"><i class="fas fa-globe"></i> Project</a>
-                        <a href="https://github.com/Echo-Team-Joy-Future-Academy-JD/Echo-Memory"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="Echo-Team-Joy-Future-Academy-JD/Echo-Memory"><i class="fas fa-star"></i> 233</span></a>
+                        <a href="https://github.com/Echo-Team-Joy-Future-Academy-JD/Echo-Memory"><i class="fab fa-github"></i> Code <span class="github-stars" data-repo="Echo-Team-Joy-Future-Academy-JD/Echo-Memory" data-stars-fixed="151"><i class="fas fa-star"></i> 151</span></a>
                     </div>
                 </div>
             </div>
@@ -894,12 +894,24 @@
 
     <script>
         (function () {
-            var cacheKey = 'github-stars-v6';
+            var cacheKey = 'github-stars-v7';
             var cacheTtl = 24 * 60 * 60 * 1000;
             var starEls = Array.prototype.slice.call(document.querySelectorAll('.github-stars[data-repo]'));
 
+            function fixedStarCount(el) {
+                var raw = el.getAttribute('data-stars-fixed');
+                if (raw == null || raw === '') return null;
+                var n = parseInt(raw, 10);
+                return isNaN(n) ? null : n;
+            }
+
             function renderStars(stars) {
                 starEls.forEach(function (el) {
+                    var fixed = fixedStarCount(el);
+                    if (fixed !== null) {
+                        el.innerHTML = '<i class="fas fa-star"></i> ' + fixed.toLocaleString();
+                        return;
+                    }
                     var repo = el.getAttribute('data-repo');
                     if (typeof stars[repo] === 'number') {
                         el.innerHTML = '<i class="fas fa-star"></i> ' + stars[repo].toLocaleString();
@@ -916,6 +928,7 @@
             } catch (err) {}
 
             Promise.all(starEls.map(function (el) {
+                if (fixedStarCount(el) !== null) return Promise.resolve(null);
                 var repo = el.getAttribute('data-repo');
                 return fetch('https://api.github.com/repos/' + repo)
                     .then(function (res) { return res.ok ? res.json() : null; })
