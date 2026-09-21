@@ -481,7 +481,7 @@
         }
 
         .news-scroll {
-            max-height: 128px;
+            max-height: 168px;
             overflow-y: auto;
             list-style: none;
             padding: 4px 14px 4px 0;
@@ -492,6 +492,58 @@
 
         .news-scroll li {
             margin-bottom: 10px;
+        }
+
+        .blog-list,
+        .talk-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .blog-item,
+        .talk-item {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 22px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 22px;
+        }
+
+        .blog-item:last-child,
+        .talk-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .blog-item strong,
+        .talk-item strong {
+            display: block;
+            font-size: 1.12rem;
+            color: #222;
+            margin-bottom: 6px;
+            font-family: 'Merriweather', serif;
+            line-height: 1.45;
+        }
+
+        .blog-meta,
+        .talk-meta {
+            color: #555;
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        .blog-meta a,
+        .talk-meta a {
+            font-weight: 600;
+        }
+
+        .talk-venue {
+            color: #78828c;
+            font-size: 0.9rem;
+            margin-top: 4px;
         }
 
         .news-scroll::-webkit-scrollbar {
@@ -560,7 +612,9 @@
                 object-fit: cover;
             }
             
-            .experience-item {
+            .experience-item,
+            .blog-item,
+            .talk-item {
                 flex-direction: column;
                 align-items: flex-start;
             }
@@ -597,6 +651,7 @@
                     <a href="https://x.com/JinWeiyang18434" target="_blank"><i class="fab fa-twitter"></i> Twitter/X</a>
                     <a href="https://scholar.google.com/citations?user=cazmdIMAAAAJ&hl=zh-TW" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
                     <a href="https://www.xiaohongshu.com/user/profile/647957f30000000011003aab" target="_blank"><i class="fas fa-book"></i> 小红书</a>
+                    <a href="https://waynejin0918.github.io/how-far-native-ar-video/" target="_blank"><i class="fas fa-pen-nib"></i> Blog</a>
                 </div>
 
 
@@ -622,12 +677,29 @@
         <section>
             <h2 id="news" class="section-title">News</h2>
             <ul class="news-scroll">
+                <li><span class="news-date">2026/09</span> Invited talk at <strong>Amap, Alibaba</strong>, hosted by Dr. Yilun Chen.</li>
+                <li><span class="news-date">2026/08</span> New blog post: <a href="https://waynejin0918.github.io/how-far-native-ar-video/" target="_blank">How Far Are We from a Native Autoregressive Video Model?</a></li>
                 <li><span class="news-date">2026/08</span> <strong>UniSandBox</strong> accepted to <strong>EMNLP 2026</strong> Main.</li>
                 <li><span class="news-date">2026/07</span> <strong>SRUM</strong> accepted to <strong>ECCV 2026</strong>.</li>
                 <li><span class="news-date">2026/02</span> <strong>UniVerse</strong> accepted to <strong>CVPR 2026</strong>.</li>
                 <li><span class="news-date">2026/01</span> <strong>WISE</strong> accepted to <strong>ICML 2026</strong>.</li>
                 <li><span class="news-date">2025/11</span> Joined <strong>Echo Team @ Joy Future Academy</strong> as a research intern.</li>
+                <li><span class="news-date">2025/10</span> Invited talk at <strong>SLAI</strong>, hosted by Prof. Xiaoguang Han.</li>
                 <li><span class="news-date">2025/10</span> Will join <a href="https://mmlab.hk/">HKU-MMLab</a> and start my PhD career.</li>
+            </ul>
+        </section>
+
+        <!-- Blog -->
+        <section>
+            <h2 id="blog" class="section-title">Blog</h2>
+            <ul class="blog-list">
+                <li class="blog-item">
+                    <div class="blog-details">
+                        <strong><a href="https://waynejin0918.github.io/how-far-native-ar-video/" target="_blank">How Far Are We from a Native Autoregressive Video Model?</a></strong>
+                        <div class="blog-meta">A note on what native autoregression should mean for video, and how far current stacks still are from that definition.</div>
+                    </div>
+                    <div class="exp-date">Aug 2026</div>
+                </li>
             </ul>
         </section>
 
@@ -865,6 +937,29 @@
                         <span>Research Intern with Prof. Hao Zhao</span>
                     </div>
                     <div class="exp-date">May 2022 - Apr 2023</div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Invited Talks -->
+        <section>
+            <h2 id="talks" class="section-title">Invited Talks</h2>
+            <ul class="talk-list">
+                <li class="talk-item">
+                    <div class="talk-details">
+                        <strong>From Digital World to Physical Intelligence: Party After Frontier LLMs</strong>
+                        <div class="talk-meta">Invited by Dr. <a href="https://yilunchen.com/about/" target="_blank">Yilun Chen</a></div>
+                        <div class="talk-venue"><i class="fas fa-microphone"></i> Amap (Gaode), Alibaba</div>
+                    </div>
+                    <div class="exp-date">Sep 2026</div>
+                </li>
+                <li class="talk-item">
+                    <div class="talk-details">
+                        <strong>Our Vision is Dead？</strong>
+                        <div class="talk-meta">Invited by Prof. <a href="https://www.slai.edu.cn/en/teacher/239" target="_blank">Xiaoguang Han</a></div>
+                        <div class="talk-venue"><i class="fas fa-microphone"></i> <a href="https://www.slai.edu.cn/" target="_blank">SLAI</a> (Shenzhen Loop Area Institute)</div>
+                    </div>
+                    <div class="exp-date">Oct 2025</div>
                 </li>
             </ul>
         </section>
