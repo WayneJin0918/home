@@ -540,6 +540,16 @@
             font-weight: 600;
         }
 
+        .blog-views {
+            margin-top: 8px;
+            color: #78828c;
+            font-size: 0.92rem;
+        }
+
+        .blog-views i {
+            margin-right: 4px;
+        }
+
         .talk-venue {
             color: #78828c;
             font-size: 0.9rem;
@@ -697,6 +707,7 @@
                     <div class="blog-details">
                         <strong><a href="https://waynejin0918.github.io/how-far-native-ar-video/" target="_blank">How Far Are We from a Native Autoregressive Video Model?</a></strong>
                         <div class="blog-meta">A note on what native autoregression should mean for video, and how far current stacks still are from that definition.</div>
+                        <div class="blog-views"><i class="far fa-eye"></i> <span data-views="get" data-views-label="views">7,360 views</span></div>
                     </div>
                     <div class="exp-date">Aug 2026</div>
                 </li>
@@ -989,6 +1000,23 @@
 
     </div>
 
+    <script>
+        (function () {
+            var nodes = document.querySelectorAll("[data-views]");
+            if (!nodes.length) return;
+            fetch("https://abacus.jasoncameron.dev/get/waynejin0918/native-ar-video")
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    if (typeof data.value !== "number") return;
+                    var text = data.value.toLocaleString("en-US");
+                    nodes.forEach(function (el) {
+                        var label = el.getAttribute("data-views-label");
+                        el.textContent = label ? text + " " + label : text;
+                    });
+                })
+                .catch(function () {});
+        })();
+    </script>
     <script>
         (function () {
             var cacheKey = 'github-stars-v8';
