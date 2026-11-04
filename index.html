@@ -426,27 +426,66 @@
 
         .pub-content .links {
             margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
         }
 
         .pub-content .links a {
-            display: inline-block;
-            margin-right: 15px;
-            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 0;
+            padding: 5px 11px;
+            font-size: 0.78rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.2px;
+            color: #163a6b;
+            background: #eef3f8;
+            border: 1px solid #d5e0eb;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+        }
+
+        .pub-content .links a:hover {
+            background: #e3ebf4;
+            border-color: #bbcada;
+            color: #0f2d56;
+            text-decoration: none;
+        }
+
+        .pub-content .links a .fab.fa-github,
+        .pub-content .links a[href*="github.com"] {
+            color: #24292f;
+        }
+
+        .pub-content .links a[href*="github.com"] {
+            background: #f3f4f6;
+            border-color: #d8dbe0;
+        }
+
+        .pub-content .links a[href*="github.com"]:hover {
+            background: #e9ebef;
+            border-color: #c8ccd2;
+        }
+
+        .pub-content .links a i {
+            font-size: 0.82rem;
         }
 
         .github-stars {
             text-transform: none;
             letter-spacing: 0;
             font-weight: 600;
-            margin-left: 4px;
+            margin-left: 2px;
+            color: #666;
         }
 
         .github-stars .fa-star {
             color: #f5a623;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             margin-right: 2px;
         }
 
